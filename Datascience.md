@@ -18,8 +18,6 @@
 <p>Diante do exposto, vamos explorar o estado da arte desses algoritmos, discorrendo sobre a aprendizagem supervisionada e, posteriormente, a aprendizagem não supervisionada.
     <br>
     <br>
-     
-    
 
    <li><h2>Aprendizado Supervisionado</h2>
 	<p>O aprendizado supervisionado acontece quando se tem conhecimento dos dados e qual o resultado das perguntas. Ou seja, quando já se tem noção da relação entre entrada e saída. Esse aprendizado ocorre normalmente quando temos um problema de Classificação ou de Regressão. Mas qual é a diferença entre esses dois problemas?
