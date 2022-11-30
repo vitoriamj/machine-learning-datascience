@@ -92,8 +92,8 @@ O funcionamento do algoritmo em si é simples, os dados são convertidos para um
     
     
    <li><h3>Suport Vector Machine (SVM)</h3></li>    
-    <p>O SVM (Support Vector Machine) é um algoritmo usado tanto para regressão quanto para classificação. Esse algoritmo busca achar um hiperplano entre pontos de dados, que irá classificar os dados. Se tivermos em 2 dimensões o hiperplano será uma reta, e em 3 dimensões um plano 2D. O algoritmo busca achar entre os hiperplanos existentes aquele com a maior distância possível entre os dados distintos.
-	    <img src="https://static.javatpoint.com/tutorial/machine-learning/images/support-vector-machine-algorithm5.png">
+    	<p>O SVM (Support Vector Machine) é um algoritmo usado tanto para regressão quanto para classificação. Esse algoritmo busca achar um hiperplano entre pontos de dados, que irá classificar os dados. Se tivermos em 2 dimensões o hiperplano será uma reta, e em 3 dimensões um plano 2D. O algoritmo busca achar entre os hiperplanos existentes aquele com a maior distância possível entre os dados distintos.
+	<img src="https://static.javatpoint.com/tutorial/machine-learning/images/support-vector-machine-algorithm5.png">
 	    
 	<p>Em algumas situações pode ser complicado separar os pontos em 2 dimensões por uma reta de uma maneira satisfatória. Para isso, pode-se utilizar algumas técnicas, que leva os pontos para 3 dimensões, encontrar o hiperplano e transformar os pontos em 2 dimensões. Por exemplo imagine que temos um  conjunto, o qual está separados em 2 categorias azul e vermelho, porém, inicialmente, não temos a informação de quais pontos são vermelhos e quais são azuis. Dependendo da configuração deles no plano 2D, é impossível traçar uma reta capaz de separar os pontos azuis e vermelhos, porém se colocar os pontos em 3 dimensões, como a figura abaixo:
     <img src="https://www.researchgate.net/profile/Aldemon-Bonifacio/publication/318598388/figure/fig1/AS:614057111457801@1523414032621/Figura-215-Classicacao-perfeita-pelo-hiperplano-otimo-do-SVM-com-kernel-nao-linear.png" style="width: 300px">
