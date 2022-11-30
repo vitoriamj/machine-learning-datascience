@@ -1,4 +1,6 @@
+---
 mathjax: true
+---
 
 <h1 style="text-align: center">Machine Learning: Algoritmos de Aprendizado <br> Supervisionado e Não Supervisionado</h1>
 
