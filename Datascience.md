@@ -7,211 +7,201 @@
 </h4>
 <br>
 
-
-
 <ol>
-    
-   <li><h2>Introdução</h2></li>
-    <p>Nos últimos anos, houve um crescimento exponencial na geração de dados, os quais vão desde o seu histórico de compras em um site online aos vídeos rápidos que você assiste no TikTok ou no Instagram.
-    <p>Esse enorme volume de dados, fez com que palavras como Data Science, Machine Learning, Big Data e  algoritmos de aprendizado, se tornassem mais presentes e famosas no cotidiano. Mas afinal o que elas significam? De maneira geral, esses termos se referem a como trabalhar com os dados. Ou seja, como podemos usar essas informações para tornar tarefas mais eficientes, automatizar serviços ou recomendar novas compras.
-    <p>Para fazer esses serviços coletamos um volume de dados, colocamos no computador e o treinamos para realizar tarefas. Para isso, precisamos da ajuda dos algoritmos de aprendizado. São eles que, com base na entrada, dizem qual a ação deve ser tomada.
-<p>Diante do exposto, vamos explorar o estado da arte desses algoritmos, discorrendo sobre a aprendizagem supervisionada e, posteriormente, a aprendizagem não supervisionada.
-    <br>
-    <br>
-     
-    
-
-   <li><h2>Aprendizado Supervisionado</h2>
-	<p>O aprendizado supervisionado acontece quando se tem conhecimento dos dados e qual o resultado das perguntas. Ou seja, quando já se tem noção da relação entre entrada e saída. Esse aprendizado ocorre normalmente quando temos um problema de Classificação ou de Regressão. Mas qual é a diferença entre esses dois problemas?
-	<p>Por exemplo, ao analisar um filme ele pode ser de ação, drama, romance, comédia, terror etc. Quando se trata de um problema de classificação a intenção será prever a categoria da entrada. A regressão semelhante a classificação também quer saber a categoria da entrada, porém ela usa um valor numérico como resposta.
-	<p>Para todas as situações é necessário que se tenham medidas para medir o desempenho de algoritmos. Em problemas de classificação a acurácia e o erro são as principais ferramentas para medir o desempenho. A acurácia é o total de observações classificadas corretamente divida pelo total de previsões e o erro se dá pela subtração da acurácia de um.
-	<p>Em problemas de regressão o mais usado é o RMSE (Raiz do Erro Quadrado Médio) que na prática consiste na distância entre cada precisão e a linha de regressão, sendo que quanto maior o RMSE, pior a precisão do modelo.
-    <p>É importante lembrar que nem sempre essas duas ferramentas são capazes de dizer a precisão de um modelo de aprendizado supervisionado.
-    <br>
-    <br>
-    
-        
-        
-<ol>
-    <li><h3>K-Nearest Neighbours (KNN)</h3></li>
-    <p>É um algoritmo que utiliza a proximidade para fazer classificações sobre algum tipo de dado, é normalmente usado como um algoritmo para classificar dados, partindo do princípio que dados similares estarão próximos um do outro. Bastante útil no reconhecimento de padrões, por exemplo, visto que os dados com um comportamento parecido não ficarão distantes.
-    <p>Então para determinar essa proximidade, podemos calcular a distância entre esses dados usando alguns fatores e métodos. Entre os mais usados estão:
-    <p>Distância euclidiana: mede a distância em linha reta entre os pontos consultados e os pontos sendo medidos: $$d(x,y)=\sqrt[]{\sum_{i=1}^{n}(y_i-x_i)^2}$$
-    <p>Distância de Manhattan: Mede o valor absoluto entre dois pontos: $$d(x,y) = \sum_{i=1}^{n}|y_i-x_i|$$
-    <p>Existem outras distâncias como a de Minkowski e a de Hamming, mas não é o intuito explorá-las.
-    <p>O K no nome define quantos vizinhos iremos checar. Definir K é extremamente importante, pois alguns valores podem levar a algo extremamente complexo ou ineficiente. Obviamente a escolha de K vai depender dos dados de entrada. Dados com mais outliers (que fogem da normalidade) precisam de valores de K maiores. É interessante usar sempre valores ímpares de K, independente da entrada para evitar empates na classificação.
-    <p>Entre as vantagens do K-NN temos:
-    <ul>
-        <li>Implementação fácil;
-        <li>Boa capacidade de adaptação à medida que novos dados são inseridos;
-        <li>poucos hiperparâmetros (apenas um valor para K e uma distância métrica).
-    </ul>
-    <p>As desvantagens acabam sendo:
-    <ul>
-        <li>Requer quantidades significativas de memória e armazenamento, o que aumenta o custo financeiro (mais equipamento) e de processamento;
-        <li>Não consegue apresentar bons resultados com dados com uma grande dimensionalidade, pois após o algoritmo se ater a um número otimizado de resultados, tenta aumentar o erro na classificação dos dados, especialmente se tratando de amostras pequenas.
-    </ul>
-    <p>Normalmente os algoritmos de K-NN, usam uma priority queue para deixar a complexidade em $O(n*log(k))$
-    Os algoritmos de K-NN são usados principalmente em:
-    <ul>
-        <li>Algoritmos de recomendação: algoritmos que com base no que o usuário consumiu, recomenda novos produtos, os quais podem ser de filmes até produtos do dia-a-dia;
-        <li>Finanças: Bancos usam algoritmos para saber o risco de inadimplência de clientes na hora de fornecer um empréstimo, usado previsão de bolsa de valores e até mesmo para analisar possíveis esquemas de lavagem de dinheiro;
-        <li>Saúde: Análise da probabilidade de pacientes desenvolverem alguma doença genética, verificando anomalias no DNA.
-    </ul>
-    <br>
-
-
-    
-   <li><h3>Naive-Bayes</h3></li>
-    <p>O algoritmo de Naive-Bayes é um classificador probabilístico que é baseado no teorema de Bayes. Não é um apenas um algoritmo, mas um conjunto desses que compartilham um mesmo princípio, cada par de eventos que está sendo classificado é independente um do outro.
-    <p>O teorema de Bayes quer saber a probabilidade de um evento ocorrer, sabendo que outro evento ocorreu: $p(A|B) = \frac{p(B|A)p(A)}{p(B)}$
-Naive assume que os eventos possuem independência entre si.
-    <br>
-O funcionamento do algoritmo em si é simples, os dados são convertidos para uma tabela de frequência. Posteriormente, as probabilidades dos eventos necessários para a classificação dos dados são calculadas e postas em outra tabela. Após, a equação de Naive-Bayes é usada para calcular a probabilidade para cada classe. A classe com a maior probabilidade será a resposta.
-    <p>$$p(c|X) = \frac{p(X|c)p(c)}{p(X)}$$
-    <p>Na fórmula acima, p(c|X) é a probabilidade de c de acordo com o dado X, p(X|c) é a probabilidade do dado c sendo X verdade, p(c) é a probabilidade de c ser verdade e p(x) é  a probabilidade de X ser verdade.
-    <p>Entre as vantagens deste algoritmo estão:
-    <ul>
-        <li>É fácil e rápido predizer as classificações dos dados de entrada, além de ter boa performance em multiclasses;
-        <li>Quando a independência entre os eventos é verdadeira, ele performa melhor que outros algoritmos de classificação, como regressão logística, e  precisa de menos dados para treinar a IA;
-        <li>Funciona melhor quando a entrada de dados é categórica e não númerica, isto é, pode ser divida em grupos, como sexo, idade.
-    </ul>
-    <p>Já pelo lados das desvantagens destacam-se:
-    <ul>
-        <li>Se uma categoria nos dados de entrada não estava nos dados de aprendizado, ela terá frequência zero e não será recomendada;
-        <li>Não é um algoritmo muito bom para fazer estimativas;
-        <li>O teorema assume que os eventos são 100% independentes, porém no mundo real é bem raro que os eventos sejam completamente independentes.
-    </ul>
-    <p>Esse algoritmo acaba por ser muito utilizado para:
-    <ul>
-        <li>Realizar predições em tempo real, como o algoritmo é rápido, ele pode ser usado para realizar predições instantâneas;
-        <li>Também pode ser usado para predição de múltiplas classes, isto é, dado uma entrada pode calcular as probabilidades de ela pertencer a uma classe;
-        <li>Extremamente usado em filtros de spam e análise de sentimentos em redes sociais, visto que pode calcular a probabilidade de um email ser spam, além de conseguir analisar post em redes sociais e tentar predizer a opinião ali exposta;
-        <li>Algoritmos de recomendação em geral.
-    </ul>
-    <br>
-
-    
-    
-   <li><h3>Suport Vector Machine (SVM)</h3></li>    
-    <p>O SVM (Support Vector Machine) é um algoritmo usado tanto para regressão quanto para classificação. Esse algoritmo busca achar um hiperplano entre pontos de dados, que irá classificar os dados. Se tivermos em 2 dimensões o hiperplano será uma reta, e em 3 dimensões um plano 2D. O algoritmo busca achar entre os hiperplanos existentes aquele com a maior distância possível entre os dados distintos.
-	    <![teste](https://static.javatpoint.com/tutorial/machine-learning/images/support-vector-machine-algorithm5.png)>
-	<p>Em algumas situações pode ser complicado separar os pontos em 2 dimensões por uma reta de uma maneira satisfatória. Para isso, pode-se utilizar algumas técnicas, que leva os pontos para 3 dimensões, encontrar o hiperplano e transformar os pontos em 2 dimensões. Por exemplo imagine que temos um  conjunto, o qual está separados em 2 categorias azul e vermelho, porém, inicialmente, não temos a informação de quais pontos são vermelhos e quais são azuis. Dependendo da configuração deles no plano 2D, é impossível traçar uma reta capaz de separar os pontos azuis e vermelhos, porém se colocar os pontos em 3 dimensões, como a figura abaixo:
-    <img src="https://www.researchgate.net/profile/Aldemon-Bonifacio/publication/318598388/figure/fig1/AS:614057111457801@1523414032621/Figura-215-Classicacao-perfeita-pelo-hiperplano-otimo-do-SVM-com-kernel-nao-linear.png" style="width: 300px">
-    <p>Terá uma nítida separação entre os pontos. Podemos então encontrar o hiperplano e retornar em 2 dimensões, com definição entre pontos azuis e vermelhos encontrada. Essa manobra de usar 3 dimensões para encontrar as diferenças no conjunto dados  é chamada de Truque de Kernel e é responsável por dar uma versatilidade bem maior para os algoritmos de SVM.
-	<p>Como vantagens destacam-se:
-    <ul>
-        <li>Uso bastante efetivos em conjunto de dados com múltiplas funcionalidades, como dados financeiros ou médicos.
-        <li>Usa um subconjunto de pontos para aprendizado na função de decisão,os quais são chamados de “support vectors”, o qual torna o uso de memória mais eficiente, ou seja, utiliza menos recursos.
-        <li>Diferentes funções de Kernel podem ser especificadas para as funções de decisão, pode usar algumas funções específicas também, o que aumenta a versatilidade e a precisão do algoritmo.
-    </ul>
-    <p>Pelo ponto de vista das desvantagens:
-    <ul>
-        <li>Funciona melhor quando os dados que serão usados para treinar o algoritmo, não forem muito grandes visto que o tempo de treinamento é alto.
-        <li>Não funciona muito bem quando os dados têm mais ruído, isto é, as classes de destino estão mais sobrepostas.
-    </ul>
-    <p>Os algoritmos de SVM são bastante usados em vários campos:
-    <ul>
-        <li>Na saúde, são usados para predizer a agressividade de tumores, mapeamento genético.
-        <li>Em processamentos de imagens, identificando irregularidades em superfícies, para modelos de reconhecimento facial e de diferenciação de expressão (identificação de sentimentos).
-        <li>Na geologia, é usada para fazer mapeamento de camadas do solo.
-        <li>No processamento de linguagem usado para classificação de textos por assuntos.
-    </ul>
-    <br>
-
-
-
-   <li><h3>Random Forest</h3></li>
-    <p>O Random Forest é um algoritmo popular do Machine Learning que pode ser utilizado para resolver problemas tanto de Classificação quanto de Regressão (explicados no tópico de Aprendizado Supervisionado).
-    <p>Para melhor compreender essa ferramenta, é preciso entender o que são árvores de definição. Decision trees são uma maneira gráfica de representar todas as possíveis soluções para um problema ou decisão com base em condições.
-	<p>Nessas estruturas de classificação, os nós internos, chamados de nós de decisão, atuam como um meio de dividir os dados, os ramos representam as regras de decisão e cada nó folha representa o resultado.
-	<p>As árvores de decisão procuram encontrar a melhor divisão para subconjunto dos dados e são normalmente treinadas por meio do algoritmo Classification and Regression Tree (CART). Métricas, como impureza Gini, ganho de informação ou erro quadrático médio (MSE), podem ser usadas para avaliar a qualidade da divisão.
-    <p>É baseado no Método Ensemble, que é um processo que combina a saída de várias árvores de decisão para chegar a um único resultado. O maior número de árvores na floresta leva a uma maior precisão e evita o problema de overfitting.
-    <br><i>*Overfitting: cenário em que o modelo aprende tão bem as relações existentes no treino, que acabou apenas decorando o que deveria ser feito, e, ao receber as informações das variáveis preditoras nos dados de teste, o modelo tenta aplicar as mesmas regras decoradas, porém com dados diferentes esta regra não tem validade, e o desempenho é afetado.</i>
-    <br>
-    <img src="https://static.javatpoint.com/tutorial/machine-learning/images/random-forest-algorithm.png" style="width: 300px">
-    <p>O processo de funcionamento dos algoritmos de Random Forest, são divididos nas seguintes etapas:
-    <ol>
-        <li>Selecione uma amostra aleatória de dados de treino no dataset. Aqui, é utilizado o método de reamostragem, em que as amostras selecionadas podem ser repetidas na seleção.
-        <li>Construa as árvores de decisão associadas aos dados de treino selecionados (subsets). Para selecionar as variáveis de cada nó:
+    <div>
+        <li><h2>Introdução</h2></li>
+        <p>Nos últimos anos, houve um crescimento exponencial na geração de dados, os quais vão desde o seu histórico de compras em um site online aos vídeos rápidos que você assiste no TikTok ou no Instagram.
+        <p>Esse enorme volume de dados, fez com que palavras como Data Science, Machine Learning, Big Data e  algoritmos de aprendizado, se tornassem mais presentes e famosas no cotidiano. Mas afinal o que elas significam? De maneira geral, esses termos se referem a como trabalhar com os dados. Ou seja, como podemos usar essas informações para tornar tarefas mais eficientes, automatizar serviços ou recomendar novas compras.
+        <p>Para fazer esses serviços coletamos um volume de dados, colocamos no computador e o treinamos para realizar tarefas. Para isso, precisamos da ajuda dos algoritmos de aprendizado. São eles que, com base na entrada, dizem qual a ação deve ser tomada.
+        <p>Diante do exposto, vamos explorar o estado da arte desses algoritmos, discorrendo sobre a aprendizagem supervisionada e, posteriormente, a aprendizagem não supervisionada.
+        <br>
+        <br>
+    </div>
+    <div>
+        <li><h2>Aprendizado Supervisionado</h2>
+        <p>O aprendizado supervisionado acontece quando se tem conhecimento dos dados e qual o resultado das perguntas. Ou seja, quando já se tem noção da relação entre entrada e saída. Esse aprendizado ocorre normalmente quando temos um problema de Classificação ou de Regressão. Mas qual é a diferença entre esses dois problemas?
+        <p>Por exemplo, ao analisar um filme ele pode ser de ação, drama, romance, comédia, terror etc. Quando se trata de um problema de classificação a intenção será prever a categoria da entrada. A regressão semelhante a classificação também quer saber a categoria da entrada, porém ela usa um valor numérico como resposta.
+        <p>Para todas as situações é necessário que se tenham medidas para medir o desempenho de algoritmos. Em problemas de classificação a acurácia e o erro são as principais ferramentas para medir o desempenho. A acurácia é o total de observações classificadas corretamente divida pelo total de previsões e o erro se dá pela subtração da acurácia de um.
+        <p>Em problemas de regressão o mais usado é o RMSE (Raiz do Erro Quadrado Médio) que na prática consiste na distância entre cada precisão e a linha de regressão, sendo que quanto maior o RMSE, pior a precisão do modelo.
+        <p>É importante lembrar que nem sempre essas duas ferramentas são capazes de dizer a precisão de um modelo de aprendizado supervisionado.
+        <br>
+        <br>
         <ol>
-            <li>O Random Forest irá escolher de maneira aleatória duas ou mais variáveis, e então realizar cálculos com base nas amostras selecionadas, para definir qual dessas variáveis será utilizada no nó raíz.
-            <li>O processo é repetido até a construção do último nó, excluindo das escolhas randômicas as variáveis selecionadas anteriormente.
+            <div>
+                <li><h3>K-Nearest Neighbours (KNN)</h3></li>
+                <p>É um algoritmo que utiliza a proximidade para fazer classificações sobre algum tipo de dado, é normalmente usado como um algoritmo para classificar dados, partindo do princípio que dados similares estarão próximos um do outro. Bastante útil no reconhecimento de padrões, por exemplo, visto que os dados com um comportamento parecido não ficarão distantes.
+                <p>Então para determinar essa proximidade, podemos calcular a distância entre esses dados usando alguns fatores e métodos. Entre os mais usados estão:
+                <p>Distância euclidiana: mede a distância em linha reta entre os pontos consultados e os pontos sendo medidos: $$d(x,y)=\sqrt[]{\sum_{i=1}^{n}(y_i-x_i)^2}$$
+                <p>Distância de Manhattan: Mede o valor absoluto entre dois pontos: $$d(x,y) = \sum_{i=1}^{n}|y_i-x_i|$$
+                <p>Existem outras distâncias como a de Minkowski e a de Hamming, mas não é o intuito explorá-las.
+                <p>O K no nome define quantos vizinhos iremos checar. Definir K é extremamente importante, pois alguns valores podem levar a algo extremamente complexo ou ineficiente. Obviamente a escolha de K vai depender dos dados de entrada. Dados com mais outliers (que fogem da normalidade) precisam de valores de K maiores. É interessante usar sempre valores ímpares de K, independente da entrada para evitar empates na classificação.
+                <p>Entre as vantagens do K-NN temos:
+                <ul>
+                    <li>Implementação fácil;
+                    <li>Boa capacidade de adaptação à medida que novos dados são inseridos;
+                    <li>poucos hiperparâmetros (apenas um valor para K e uma distância métrica).
+                </ul>
+                <p>As desvantagens acabam sendo:
+                <ul>
+                    <li>Requer quantidades significativas de memória e armazenamento, o que aumenta o custo financeiro (mais equipamento) e de processamento;
+                    <li>Não consegue apresentar bons resultados com dados com uma grande dimensionalidade, pois após o algoritmo se ater a um número otimizado de resultados, tenta aumentar o erro na classificação dos dados, especialmente se tratando de amostras pequenas.
+                </ul>
+                <p>Normalmente os algoritmos de K-NN, usam uma priority queue para deixar a complexidade em $O(n*log(k))$
+                Os algoritmos de K-NN são usados principalmente em:
+                <ul>
+                    <li>Algoritmos de recomendação: algoritmos que com base no que o usuário consumiu, recomenda novos produtos, os quais podem ser de filmes até produtos do dia-a-dia;
+                    <li>Finanças: Bancos usam algoritmos para saber o risco de inadimplência de clientes na hora de fornecer um empréstimo, usado previsão de bolsa de valores e até mesmo para analisar possíveis esquemas de lavagem de dinheiro;
+                    <li>Saúde: Análise da probabilidade de pacientes desenvolverem alguma doença genética, verificando anomalias no DNA.
+                </ul>
+                <br>
+            </div>
+            <div>
+                <li><h3>Naive-Bayes</h3></li>
+                <p>O algoritmo de Naive-Bayes é um classificador probabilístico que é baseado no teorema de Bayes. Não é um apenas um algoritmo, mas um conjunto desses que compartilham um mesmo princípio, cada par de eventos que está sendo classificado é independente um do outro.
+                <p>O teorema de Bayes quer saber a probabilidade de um evento ocorrer, sabendo que outro evento ocorreu: $p(A|B) = \frac{p(B|A)p(A)}{p(B)}$
+                <p>Naive assume que os eventos possuem independência entre si.
+                <br>
+                <p>O funcionamento do algoritmo em si é simples, os dados são convertidos para uma tabela de frequência. Posteriormente, as probabilidades dos eventos necessários para a classificação dos dados são calculadas e postas em outra tabela. Após, a equação de Naive-Bayes é usada para calcular a probabilidade para cada classe. A classe com a maior probabilidade será a resposta.
+                $$ p(c|X) = \frac{p(X|c)p(c)}{p(X)} $$
+                <p>Na fórmula acima, p(c|X) é a probabilidade de c de acordo com o dado X, p(X|c) é a probabilidade do dado c sendo X verdade, p(c) é a probabilidade de c ser verdade e p(x) é  a probabilidade de X ser verdade.
+                <p>Entre as vantagens deste algoritmo estão:
+                <ul>
+                    <li>É fácil e rápido predizer as classificações dos dados de entrada, além de ter boa performance em multiclasses;
+                    <li>Quando a independência entre os eventos é verdadeira, ele performa melhor que outros algoritmos de classificação, como regressão logística, e  precisa de menos dados para treinar a IA;
+                    <li>Funciona melhor quando a entrada de dados é categórica e não númerica, isto é, pode ser divida em grupos, como sexo, idade.
+                </ul>
+                <p>Já pelo lados das desvantagens destacam-se:
+                <ul>
+                    <li>Se uma categoria nos dados de entrada não estava nos dados de aprendizado, ela terá frequência zero e não será recomendada;
+                    <li>Não é um algoritmo muito bom para fazer estimativas;
+                    <li>O teorema assume que os eventos são 100% independentes, porém no mundo real é bem raro que os eventos sejam completamente independentes.
+                </ul>
+                <p>Esse algoritmo acaba por ser muito utilizado para:
+                <ul>
+                    <li>Realizar predições em tempo real, como o algoritmo é rápido, ele pode ser usado para realizar predições instantâneas;
+                    <li>Também pode ser usado para predição de múltiplas classes, isto é, dado uma entrada pode calcular as probabilidades de ela pertencer a uma classe;
+                    <li>Extremamente usado em filtros de spam e análise de sentimentos em redes sociais, visto que pode calcular a probabilidade de um email ser spam, além de conseguir analisar post em redes sociais e tentar predizer a opinião ali exposta;
+                    <li>Algoritmos de recomendação em geral.
+                </ul>
+                <br>
+            </div>
+            <div>
+                <li><h3>Suport Vector Machine (SVM)</h3></li>
+                <p>O SVM (Support Vector Machine) é um algoritmo usado tanto para regressão quanto para classificação. Esse algoritmo busca achar um hiperplano entre pontos de dados, que irá classificar os dados. Se tivermos em 2 dimensões o hiperplano será uma reta, e em 3 dimensões um plano 2D. O algoritmo busca achar entre os hiperplanos existentes aquele com a maior distância possível entre os dados distintos.
+                    <![teste](https://static.javatpoint.com/tutorial/machine-learning/images/support-vector-machine-algorithm5.png)>
+                <p>Em algumas situações pode ser complicado separar os pontos em 2 dimensões por uma reta de uma maneira satisfatória. Para isso, pode-se utilizar algumas técnicas, que leva os pontos para 3 dimensões, encontrar o hiperplano e transformar os pontos em 2 dimensões. Por exemplo imagine que temos um  conjunto, o qual está separados em 2 categorias azul e vermelho, porém, inicialmente, não temos a informação de quais pontos são vermelhos e quais são azuis. Dependendo da configuração deles no plano 2D, é impossível traçar uma reta capaz de separar os pontos azuis e vermelhos, porém se colocar os pontos em 3 dimensões, como a figura abaixo:
+                <img src="https://www.researchgate.net/profile/Aldemon-Bonifacio/publication/318598388/figure/fig1/AS:614057111457801@1523414032621/Figura-215-Classicacao-perfeita-pelo-hiperplano-otimo-do-SVM-com-kernel-nao-linear.png" style="width: 300px">
+                <p>Terá uma nítida separação entre os pontos. Podemos então encontrar o hiperplano e retornar em 2 dimensões, com definição entre pontos azuis e vermelhos encontrada. Essa manobra de usar 3 dimensões para encontrar as diferenças no conjunto dados  é chamada de Truque de Kernel e é responsável por dar uma versatilidade bem maior para os algoritmos de SVM.
+                <p>Como vantagens destacam-se:
+                <ul>
+                    <li>Uso bastante efetivos em conjunto de dados com múltiplas funcionalidades, como dados financeiros ou médicos.
+                    <li>Usa um subconjunto de pontos para aprendizado na função de decisão,os quais são chamados de “support vectors”, o qual torna o uso de memória mais eficiente, ou seja, utiliza menos recursos.
+                    <li>Diferentes funções de Kernel podem ser especificadas para as funções de decisão, pode usar algumas funções específicas também, o que aumenta a versatilidade e a precisão do algoritmo.
+                </ul>
+                <p>Pelo ponto de vista das desvantagens:
+                <ul>
+                    <li>Funciona melhor quando os dados que serão usados para treinar o algoritmo, não forem muito grandes visto que o tempo de treinamento é alto.
+                    <li>Não funciona muito bem quando os dados têm mais ruído, isto é, as classes de destino estão mais sobrepostas.
+                </ul>
+                <p>Os algoritmos de SVM são bastante usados em vários campos:
+                <ul>
+                    <li>Na saúde, são usados para predizer a agressividade de tumores, mapeamento genético.
+                    <li>Em processamentos de imagens, identificando irregularidades em superfícies, para modelos de reconhecimento facial e de diferenciação de expressão (identificação de sentimentos).
+                    <li>Na geologia, é usada para fazer mapeamento de camadas do solo.
+                    <li>No processamento de linguagem usado para classificação de textos por assuntos.
+                </ul>
+                <br>
+            </div>
+            <div>
+                <li><h3>Random Forest</h3></li>
+                <p>O Random Forest é um algoritmo popular do Machine Learning que pode ser utilizado para resolver problemas tanto de Classificação quanto de Regressão (explicados no tópico de Aprendizado Supervisionado).
+                <p>Para melhor compreender essa ferramenta, é preciso entender o que são árvores de definição. Decision trees são uma maneira gráfica de representar todas as possíveis soluções para um problema ou decisão com base em condições.
+                <p>Nessas estruturas de classificação, os nós internos, chamados de nós de decisão, atuam como um meio de dividir os dados, os ramos representam as regras de decisão e cada nó folha representa o resultado.
+                <p>As árvores de decisão procuram encontrar a melhor divisão para subconjunto dos dados e são normalmente treinadas por meio do algoritmo Classification and Regression Tree (CART). Métricas, como impureza Gini, ganho de informação ou erro quadrático médio (MSE), podem ser usadas para avaliar a qualidade da divisão.
+                <p>É baseado no Método Ensemble, que é um processo que combina a saída de várias árvores de decisão para chegar a um único resultado. O maior número de árvores na floresta leva a uma maior precisão e evita o problema de overfitting.
+                <br><i>*Overfitting: cenário em que o modelo aprende tão bem as relações existentes no treino, que acabou apenas decorando o que deveria ser feito, e, ao receber as informações das variáveis preditoras nos dados de teste, o modelo tenta aplicar as mesmas regras decoradas, porém com dados diferentes esta regra não tem validade, e o desempenho é afetado.</i>
+                <br>
+                <img src="https://static.javatpoint.com/tutorial/machine-learning/images/random-forest-algorithm.png" style="width: 300px">
+                <p>O processo de funcionamento dos algoritmos de Random Forest, são divididos nas seguintes etapas:
+                <ol>
+                    <li>Selecione uma amostra aleatória de dados de treino no dataset. Aqui, é utilizado o método de reamostragem, em que as amostras selecionadas podem ser repetidas na seleção.
+                    <li>Construa as árvores de decisão associadas aos dados de treino selecionados (subsets). Para selecionar as variáveis de cada nó:
+                    <ol>
+                        <li>O Random Forest irá escolher de maneira aleatória duas ou mais variáveis, e então realizar cálculos com base nas amostras selecionadas, para definir qual dessas variáveis será utilizada no nó raíz.
+                        <li>O processo é repetido até a construção do último nó, excluindo das escolhas randômicas as variáveis selecionadas anteriormente.
+                    </ol>
+                    <li>Escolha o número de árvores de decisão que se deseja construir.
+                    <li>Os passos 1 e 2 são repetidos na construção das outras árvores de decisão.
+                    <li>Para cada árvore de decisão, são encontradas previsões, os resultados. Em problemas de regressão será realizada a média dos valores previstos, e esta média informada será o resultado final e em problemas de classificação o resultado com maioria dos votos será o escolhido.
+                </ol>
+                <p>O algoritmo de Random Forest apresenta diversas vantagens e desvantagens quando usado em problemas de classificação e de regressão. Algumas das vantagens incluem:
+                <ul>
+                    <li>O Random Forest pode ser utilizado para resolver problemas tanto de Classificação quanto de Regressão
+                    <li>Menor risco de overfitting: Árvores de decisão correm o risco de overfitting, pois tendem a se ajustar perfeitamente a todas as amostras nos dados de treinamento. No Random Forest há um número grande de árvores de decisão, o classificador não fará overfit do modelo, pois a média de árvores não correlacionadas reduz a variância e erros de previsão.
+                    <li>É capaz de lidar com grande volumes de dados e com alta dimensionalidade.
+                </ul>
+                <p>Entre as desvantagens desse algoritmo, temos:
+                <ul>
+                    <li>O Random Forest pode lidar com grandes conjuntos de dados e  fornecer previsões mais precisas, mas podem ser lentos para processar dados, pois estão computando dados para cada árvore de decisão individual.
+                    <li>Como as florestas aleatórias processam conjuntos de dados maiores, elas exigirão mais recursos computacionais para armazenar esses dados.
+                    <li>Mais complexo: A previsão de uma única árvore de decisão é mais fácil de interpretar quando comparada a uma floresta delas.
+                </ul>
+                <p>Essa ferramenta do Machine Learning auxilia na melhor tomada de decisões, sendo algumas de suas aplicações:
+                <ul>
+                    <li>Finanças: Reduz o tempo gasto em gerenciamento de dados e tarefas de pré-processamento, em relação a outros algoritmos. Pode ser usado para avaliar clientes com alto risco de crédito, detectar fraudes e problemas de precificação de opções.
+                    <li>Medicina: Na biologia computacional esse algoritmo permite que os médicos resolvam problemas como classificação de expressão gênica, descoberta de biomarcadores e anotação de sequência. Como resultado, os médicos podem fazer estimativas em torno das respostas dos medicamentos a medicamentos específicos. Além disso, auxilia na identificação de tendências de doenças e os riscos de doenças.
+                    <li>E-commerce e marketing: Pode ser usado para mecanismos de recomendação para fins de venda cruzada, bem como a identificação de novas tendências.
+                    <li>Uso do solo: Podemos identificar as áreas de uso do solo semelhantes por este algoritmo.
+                </ul>
+                <br>
+            </div>
+
+        <li><h3>Redes Neurais Artificiais (RNA)</h3></li>
+            <p>As redes neurais artificiais são algoritmos que tentam emular o funcionamento de um cérebro. Para isso são utilizados grafos. São constituídos por camadas, sendo uma de entrada, outra de saída e uma ou mais camadas ocultas.
+            <p>Os vértices do grafo seriam os neurônios, possuem um valor limite de saída e conectam-se a outros por arestas com peso. Uma RNA possui 5 partes gerais, as conexões entre os neurônios, cada uma possuindo um peso sináptico e um integrador, que realiza a soma dos sinais de entrada sendo ponderado pelos pesos sinápticos. A função de ativação responsável por dar a saída do neurônio, é um bias que será aplicado externamente a cada neurônio, para aumentar ou diminuir a entrada.
+            <p  style="text-align: center">Rede Neural com 3 camadas
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Neural_network.svg/1200px-Neural_network.svg.png" style="width: 250px">
+            <br>
+            <p style="text-align: center">Rede Neural com 5 camadas
+            <img src="https://1.cms.s81c.com/sites/default/files/2021-01-06/ICLH_Diagram_Batch_01_03-DeepNeuralNetwork-WHITEBG.png" style="width: 280px">
+            <p>Vamos analisar matematicamente o funcionamento de uma RNA. Observe o grafo com pesos abaixo:
+            <img src="https://www.ime.usp.br/~pf/algoritmos_para_grafos/aulas/figs/iou-graph-10-nodes-and-20-edges.png" style="width: 250px">
+            <br>
+            <p>Cada vértice seria um neurônio, composto pelos dados de entrada, pesos, um limite e uma saída. Podemos relacionar a saída pela fórmula a seguir, com “m” o número de neurônios que o vértice recebe em um sinal, xi o sinal e um peso sináptico entre o neurônio i e o neurônio que estamos analisando chamado de bias: $$y = \sum{i=1}{m}w_ix_i + bias$$
+            <p>Após isso, usa uma função de ativação que será responsável por dar a saída, se o valor de y for maior que um valor, ela manda um sinal para o próximo nível. A função de ativação exerce um papel crucial, pois além de controlar a saída, ele evita que a saída exceda certo valor e assim dispare todos os neurônios da rede.
+            <p>Entre os tipos de função de  ativação temos a limiar, que restringe a saída a valores binários (0 ou 1), linear por partes, que permite o valor variar em certo intervalo, sigmoidal, que também assume um valor entre 0 e 1, mas possui um balanceamento adequado entre um comportamento linear e não linear, e tangente hiperbólica, similar a sigmoidal, porém assume valores negativos. O uso de cada uma é determinado caso a caso.
+            <p>Limiar: $f(u) =
+            \begin{cases}
+                1, &se&u \geq0 \\
+                x, &se&u>0
+            \end{cases}$
+            <p>Linear por partes: $f(u) =
+            \begin{cases}
+                1, &se&u \geq+\frac{1}{2} \\
+                u, &se&+\frac{1}{2}>u>-\frac{1}{2} \\
+                x, &se&u \leq-\frac{1}{2}
+            \end{cases}$
+            <p>Sigmoidal: $f(x) = \frac{1}{1 + e^{-x}}$
+            <p>Tangente hiperbólica: $f(u) = tanh(u)$
+            <p>Como vantagens das redes neurais tem:
+            <ul>
+                <li>Capacidade de se adaptar: como as redes neurais podem ter seus pesos sinápticos alterados, se houver pequenas mudanças no ambiente a rede pode ser retreinada para continuar operando no ambiente.
+                <li>Como cada neurônio é afetado pela atividade dos neurônios a sua volta, a informação contextual é tratada de maneira natural pela RNA.
+                <li>Uma RNA implementada em hardware pode ser considerada tolerante a falhas em casos gerais.
+            </ul>
+            <p>De desvantagens:
+            <ul>
+                <li>O treinamento é demorado, levando horas ou dias, além de depender de um grande volume de dados.
+                <li>Os dados de treinamento precisam passar por um pré-processamento, como normalização e seleção criteriosa para se obter resultados confiáveis.
+                <li>É um funcionamento do tipo caixa-preta, o qual implica não saber como a rede chegou a uma conclusão
+                <li>Pode-se obter resultados absurdos, sendo necessário supervisão humana para resolver o problema.
+            </ul>
+            <p>As RNA’s são usadas em detecção de fraude em cartões de crédito, otimização de logística para redes de transporte, processamento de linguagem natural, marketing direcionado, sistemas de controle, visão computacional para interpretar imagens e vídeos etc.
+            <br>
+            <br>
+
         </ol>
-        <li>Escolha o número de árvores de decisão que se deseja construir.
-        <li>Os passos 1 e 2 são repetidos na construção das outras árvores de decisão.
-        <li>Para cada árvore de decisão, são encontradas previsões, os resultados. Em problemas de regressão será realizada a média dos valores previstos, e esta média informada será o resultado final e em problemas de classificação o resultado com maioria dos votos será o escolhido.
-    </ol>
-	<p>O algoritmo de Random Forest apresenta diversas vantagens e desvantagens quando usado em problemas de classificação e de regressão. Algumas das vantagens incluem:
-    <ul>
-        <li>O Random Forest pode ser utilizado para resolver problemas tanto de Classificação quanto de Regressão
-        <li>Menor risco de overfitting: Árvores de decisão correm o risco de overfitting, pois tendem a se ajustar perfeitamente a todas as amostras nos dados de treinamento. No Random Forest há um número grande de árvores de decisão, o classificador não fará overfit do modelo, pois a média de árvores não correlacionadas reduz a variância e erros de previsão.
-        <li>É capaz de lidar com grande volumes de dados e com alta dimensionalidade.
-    </ul>
-    <p>Entre as desvantagens desse algoritmo, temos:
-    <ul>
-        <li>O Random Forest pode lidar com grandes conjuntos de dados e  fornecer previsões mais precisas, mas podem ser lentos para processar dados, pois estão computando dados para cada árvore de decisão individual.
-        <li>Como as florestas aleatórias processam conjuntos de dados maiores, elas exigirão mais recursos computacionais para armazenar esses dados.
-        <li>Mais complexo: A previsão de uma única árvore de decisão é mais fácil de interpretar quando comparada a uma floresta delas.
-    </ul>
-    <p>Essa ferramenta do Machine Learning auxilia na melhor tomada de decisões, sendo algumas de suas aplicações:
-    <ul>
-        <li>Finanças: Reduz o tempo gasto em gerenciamento de dados e tarefas de pré-processamento, em relação a outros algoritmos. Pode ser usado para avaliar clientes com alto risco de crédito, detectar fraudes e problemas de precificação de opções.
-        <li>Medicina: Na biologia computacional esse algoritmo permite que os médicos resolvam problemas como classificação de expressão gênica, descoberta de biomarcadores e anotação de sequência. Como resultado, os médicos podem fazer estimativas em torno das respostas dos medicamentos a medicamentos específicos. Além disso, auxilia na identificação de tendências de doenças e os riscos de doenças.
-        <li>E-commerce e marketing: Pode ser usado para mecanismos de recomendação para fins de venda cruzada, bem como a identificação de novas tendências.
-        <li>Uso do solo: Podemos identificar as áreas de uso do solo semelhantes por este algoritmo.
-    </ul>
-    <br>
-
-    
-
-   <li><h3>Redes Neurais Artificiais (RNA)</h3></li>
-    <p>As redes neurais artificiais são algoritmos que tentam emular o funcionamento de um cérebro. Para isso são utilizados grafos. São constituídos por camadas, sendo uma de entrada, outra de saída e uma ou mais camadas ocultas.
-    <p>Os vértices do grafo seriam os neurônios, possuem um valor limite de saída e conectam-se a outros por arestas com peso. Uma RNA possui 5 partes gerais, as conexões entre os neurônios, cada uma possuindo um peso sináptico e um integrador, que realiza a soma dos sinais de entrada sendo ponderado pelos pesos sinápticos. A função de ativação responsável por dar a saída do neurônio, é um bias que será aplicado externamente a cada neurônio, para aumentar ou diminuir a entrada.
-    <p  style="text-align: center">Rede Neural com 3 camadas
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Neural_network.svg/1200px-Neural_network.svg.png" style="width: 250px">
-    <br>
-    <p style="text-align: center">Rede Neural com 5 camadas
-    <img src="https://1.cms.s81c.com/sites/default/files/2021-01-06/ICLH_Diagram_Batch_01_03-DeepNeuralNetwork-WHITEBG.png" style="width: 280px">
-    <p>Vamos analisar matematicamente o funcionamento de uma RNA. Observe o grafo com pesos abaixo:
-    <img src="https://www.ime.usp.br/~pf/algoritmos_para_grafos/aulas/figs/iou-graph-10-nodes-and-20-edges.png" style="width: 250px">
-    <br>
-    <p>Cada vértice seria um neurônio, composto pelos dados de entrada, pesos, um limite e uma saída. Podemos relacionar a saída pela fórmula a seguir, com “m” o número de neurônios que o vértice recebe em um sinal, xi o sinal e um peso sináptico entre o neurônio i e o neurônio que estamos analisando chamado de bias: $$y = \sum{i=1}{m}w_ix_i + bias$$
-    <p>Após isso, usa uma função de ativação que será responsável por dar a saída, se o valor de y for maior que um valor, ela manda um sinal para o próximo nível. A função de ativação exerce um papel crucial, pois além de controlar a saída, ele evita que a saída exceda certo valor e assim dispare todos os neurônios da rede.
-	<p>Entre os tipos de função de  ativação temos a limiar, que restringe a saída a valores binários (0 ou 1), linear por partes, que permite o valor variar em certo intervalo, sigmoidal, que também assume um valor entre 0 e 1, mas possui um balanceamento adequado entre um comportamento linear e não linear, e tangente hiperbólica, similar a sigmoidal, porém assume valores negativos. O uso de cada uma é determinado caso a caso.
-    <p>Limiar: $f(u) = 
-      \begin{cases}
-          1, &se&u \geq0 \\
-          x, &se&u>0 
-      \end{cases}$
-    <p>Linear por partes: $f(u) = 
-      \begin{cases}
-          1, &se&u \geq+\frac{1}{2} \\
-          u, &se&+\frac{1}{2}>u>-\frac{1}{2} \\
-          x, &se&u \leq-\frac{1}{2} 
-      \end{cases}$
-    <p>Sigmoidal: $f(x) = \frac{1}{1 + e^{-x}}$
-    <p>Tangente hiperbólica: $f(u) = tanh(u)$
-    <p>Como vantagens das redes neurais tem:
-    <ul>
-        <li>Capacidade de se adaptar: como as redes neurais podem ter seus pesos sinápticos alterados, se houver pequenas mudanças no ambiente a rede pode ser retreinada para continuar operando no ambiente.
-        <li>Como cada neurônio é afetado pela atividade dos neurônios a sua volta, a informação contextual é tratada de maneira natural pela RNA.
-        <li>Uma RNA implementada em hardware pode ser considerada tolerante a falhas em casos gerais.
-    </ul>
-    <p>De desvantagens:
-    <ul>
-        <li>O treinamento é demorado, levando horas ou dias, além de depender de um grande volume de dados.
-        <li>Os dados de treinamento precisam passar por um pré-processamento, como normalização e seleção criteriosa para se obter resultados confiáveis.
-        <li>É um funcionamento do tipo caixa-preta, o qual implica não saber como a rede chegou a uma conclusão
-        <li>Pode-se obter resultados absurdos, sendo necessário supervisão humana para resolver o problema.
-    </ul>
-    <p>As RNA’s são usadas em detecção de fraude em cartões de crédito, otimização de logística para redes de transporte, processamento de linguagem natural, marketing direcionado, sistemas de controle, visão computacional para interpretar imagens e vídeos etc.
-    <br>
-    <br>
-
-        
-        
-</ol>
+    </div>
 
    <li><h2>Aprendizado Não Supervisionado</h2></li>
     <p>O aprendizado não supervisionado tem como objetivo buscar características comuns em dados não rotulados e, assim, fazer uma análise complexa nessas informações e usá-las para futuras investigações.
@@ -222,8 +212,6 @@ O funcionamento do algoritmo em si é simples, os dados são convertidos para um
     <br>
     <br>
 
-
-        
 <ol>
     
    <li><h3>Processamento de Linguagem Natural (PLN)</h3></li>
@@ -366,8 +354,6 @@ Essa tecnologia ensina os computadores com métodos inspirados no funcionamento 
     </ul>
     <br>
     <br>
-    
-
 
    <li><h3>Agglomerative Clustering</h3></li>
     <p>Nessa técnica, os dados são agrupados  em clusters pequenos. Seleciona-se alguns desses clusters para criar, assim, um novo cluster, o qual está hierarquizado com os anteriores, e repete-se esse processo até que se obtenha um cluster apenas.
@@ -434,9 +420,7 @@ Essa tecnologia ensina os computadores com métodos inspirados no funcionamento 
     <br> 
         
 </ol>
-    
 
-    
    <li><h2>Referências</h2></li>
     <a href="https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761">https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761</a>
     <br>
@@ -544,7 +528,6 @@ Essa tecnologia ensina os computadores com métodos inspirados no funcionamento 
     <a href="https://www.maxwell.vrac.puc-rio.br/24787/24787_6.PDF">https://www.maxwell.vrac.puc-rio.br/24787/24787_6.PDF</a>
     <br>
     <a href="https://towardsdatascience.com/how-dbscan-works-and-why-should-i-use-it-443b4a191c80">https://towardsdatascience.com/how-dbscan-works-and-why-should-i-use-it-443b4a191c80</a>
-
 
 ```python
 
