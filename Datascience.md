@@ -1,7 +1,3 @@
----
-mathjax: true
----
-
 <h1 style="text-align: center">Machine Learning: Algoritmos de Aprendizado <br> Supervisionado e Não Supervisionado</h1>
 
 <h4>
@@ -42,7 +38,9 @@ mathjax: true
     <p>É um algoritmo que utiliza a proximidade para fazer classificações sobre algum tipo de dado, é normalmente usado como um algoritmo para classificar dados, partindo do princípio que dados similares estarão próximos um do outro. Bastante útil no reconhecimento de padrões, por exemplo, visto que os dados com um comportamento parecido não ficarão distantes.
     <p>Então para determinar essa proximidade, podemos calcular a distância entre esses dados usando alguns fatores e métodos. Entre os mais usados estão:
     <p>Distância euclidiana: mede a distância em linha reta entre os pontos consultados e os pontos sendo medidos:
-    $$ d(x,y)=\sqrt[]{\sum_{i=1}^{n}(y_i-x_i)^2} $$
+   	$$
+	    d(x,y)=\sqrt[]{\sum_{i=1}^{n}(y_i-x_i)^2}
+	$$
     <p>Distância de Manhattan: Mede o valor absoluto entre dois pontos:
     $$ d(x,y) = \sum_{i=1}^{n}|y_i-x_i| $$
     <p>Existem outras distâncias como a de Minkowski e a de Hamming, mas não é o intuito explorá-las.
