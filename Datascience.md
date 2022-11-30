@@ -96,7 +96,7 @@
 		<li><h3>Suport Vector Machine (SVM)</h3></li>    
 		<p>O SVM (Support Vector Machine) é um algoritmo usado tanto para regressão quanto para classificação. Esse algoritmo busca achar um hiperplano entre pontos de dados, que irá classificar os dados. Se tivermos em 2 dimensões o hiperplano será uma reta, e em 3 dimensões um plano 2D. O algoritmo busca achar entre os hiperplanos existentes aquele com a maior distância possível entre os dados distintos.
 		<br>
-		<img src="https://static.javatpoint.com/tutorial/machine-learning/images/support-vector-machine-algorithm5.png">
+		<img src="images/image1.png">
 		<br>
 		<p>Em algumas situações pode ser complicado separar os pontos em 2 dimensões por uma reta de uma maneira satisfatória. Para isso, pode-se utilizar algumas técnicas, que leva os pontos para 3 dimensões, encontrar o hiperplano e transformar os pontos em 2 dimensões. Por exemplo imagine que temos um  conjunto, o qual está separados em 2 categorias azul e vermelho, porém, inicialmente, não temos a informação de quais pontos são vermelhos e quais são azuis. Dependendo da configuração deles no plano 2D, é impossível traçar uma reta capaz de separar os pontos azuis e vermelhos, porém se colocar os pontos em 3 dimensões, como a figura abaixo:
 		<br>
@@ -499,7 +499,6 @@
     	<br>
     	<a href="https://www.javatpoint.com/machine-learning-decision-tree-classification-algorithm">https://www.javatpoint.com/machine-learning-decision-tree-classification-algorithm</a>
     	<br>
->>>>>>> b2da8cf325cca6424d92d542368cef9a3849d2c7
 <a href="https://didatica.tech/o-que-e-e-como-funciona-o-algoritmo-randomforest/">https://didatica.tech/o-que-e-e-como-funciona-o-algoritmo-randomforest/</a>
     	<br>
     	<br>
@@ -528,8 +527,37 @@
     	<a href="https://www.3dimensoes.com.br/post/deep-learning-conceitos-e-aplicações#:~:text=O%20algoritmo%20de%20Deep%20Learning%20recebe%20sinais%20de%20sensores%2C%20de,por%20um%20condutor%20humano%20comum.">https://www.3dimensoes.com.br/post/deep-learning-conceitos-e-aplicações#:~:text=O%20algoritmo%20de%20Deep%20Learning%20recebe%20sinais%20de%20sensores%2C%20de,por%20um%20condutor%20humano%20comum.</a>
     	<br>
     	<br>
+    	<a href="https://www.javatpoint.com/k-means-clustering-algorithm-in-machine-learning">https://www.javatpoint.com/k-means-clustering-algorithm-in-machine-learning</a>
+    	<br>
+    	<a href="https://www.linkedin.com/pulse/k-means-clustering-aashima-yuthika/">https://www.linkedin.com/pulse/k-means-clustering-aashima-yuthika/</a>
+    	<br>
+    	<a href="https://developers.google.com/machine-learning/clustering/algorithm/advantages-disadvantages">https://developers.google.com/machine-learning/clustering/algorithm/advantages-disadvantages</a>
+    	<br>
+    	<a href="https://www.linkedin.com/pulse/pros-cons-k-means-clustering-aashima-yuthika/">https://www.linkedin.com/pulse/pros-cons-k-means-clustering-aashima-yuthika/</a>
+    	<br>
+    	<a href="https://datapeaker.com/big-data/que-es-big-data-caracteristicas-de-big-data/">https://datapeaker.com/big-data/que-es-big-data-caracteristicas-de-big-data/</a>
+    	<br>
+    	<a href="https://www.linkedin.com/pulse/k-means-clustering-its-applications-ritvik-ranjan/">https://www.linkedin.com/pulse/k-means-clustering-its-applications-ritvik-ranjan/</a>
+    	<br>
+    	<a href="https://medium.com/programadores-ajudando-programadores/k-means-o-que-é-como-funciona-aplicações-e-exemplo-em-python-6021df6e2572#:~:text=K-Means%20é%20um%20algoritmo,lojas%2Fcentro%20logistico">https://medium.com/programadores-ajudando-programadores/k-means-o-que-é-como-funciona-aplicações-e-exemplo-em-python-6021df6e2572#:~:text=K-Means%20é%20um%20algoritmo,lojas%2Fcentro%20logistico</a>
+    	<br>
+    	<br>
     	<a href="https://towardsdatascience.com/breaking-down-the-agglomerative-clustering-process-1c367f74c7c2">https://towardsdatascience.com/breaking-down-the-agglomerative-clustering-process-1c367f74c7c2</a>
     	<br>
+    	<a href="https://www.educba.com/hierarchical-clustering-agglomerative/?source=leftnav">https://www.educba.com/hierarchical-clustering-agglomerative/?source=leftnav</a>
+    	<br>
+    	<a href="https://towardsdatascience.com/machine-learning-algorithms-part-12-hierarchical-agglomerative-clustering-example-in-python-1e18e0075019">https://towardsdatascience.com/machine-learning-algorithms-part-12-hierarchical-agglomerative-clustering-example-in-python-1e18e0075019</a>
+    	<br>
+    	<a href="https://community.ibm.com/community/user/datascience/blogs/moloy-de1/2020/07/16/points-to-ponder">https://community.ibm.com/community/user/datascience/blogs/moloy-de1/2020/07/16/points-to-ponder</a>
+    	<br>
+    	<a href="https://towardsdatascience.com/hierarchical-clustering-and-its-applications-41c1ad4441a6">https://towardsdatascience.com/hierarchical-clustering-and-its-applications-41c1ad4441a6</a>
+    	<br>
+    	<a href="https://www.datasklr.com/segmentation-clustering/hierarchical-clustering">https://www.datasklr.com/segmentation-clustering/hierarchical-clustering</a>
+    	<br>
+    	<br>
+    	<a href="https://www.maxwell.vrac.puc-rio.br/24787/24787_6.PDF">https://www.maxwell.vrac.puc-rio.br/24787/24787_6.PDF</a>
+    	<br>
+    	<a href="https://towardsdatascience.com/how-dbscan-works-and-why-should-i-use-it-443b4a191c80">https://towardsdatascience.com/how-dbscan-works-and-why-should-i-use-it-443b4a191c80</a>
 		
 ```python
 
