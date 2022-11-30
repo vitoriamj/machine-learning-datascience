@@ -38,8 +38,7 @@
     <p>É um algoritmo que utiliza a proximidade para fazer classificações sobre algum tipo de dado, é normalmente usado como um algoritmo para classificar dados, partindo do princípio que dados similares estarão próximos um do outro. Bastante útil no reconhecimento de padrões, por exemplo, visto que os dados com um comportamento parecido não ficarão distantes.
     <p>Então para determinar essa proximidade, podemos calcular a distância entre esses dados usando alguns fatores e métodos. Entre os mais usados estão:
     <p>Distância euclidiana: mede a distância em linha reta entre os pontos consultados e os pontos sendo medidos: $$d(x,y)=\sqrt[]{\sum_{i=1}^{n}(y_i-x_i)^2}$$
-    <p>Distância de Manhattan: Mede o valor absoluto entre dois pontos:
-    $$ d(x,y) = \sum_{i=1}^{n}|y_i-x_i| $$
+    <p>Distância de Manhattan: Mede o valor absoluto entre dois pontos: $$d(x,y) = \sum_{i=1}^{n}|y_i-x_i|$$
     <p>Existem outras distâncias como a de Minkowski e a de Hamming, mas não é o intuito explorá-las.
     <p>O K no nome define quantos vizinhos iremos checar. Definir K é extremamente importante, pois alguns valores podem levar a algo extremamente complexo ou ineficiente. Obviamente a escolha de K vai depender dos dados de entrada. Dados com mais outliers (que fogem da normalidade) precisam de valores de K maiores. É interessante usar sempre valores ímpares de K, independente da entrada para evitar empates na classificação.
     <p>Entre as vantagens do K-NN temos:
@@ -70,7 +69,7 @@
 Naive assume que os eventos possuem independência entre si.
     <br>
 O funcionamento do algoritmo em si é simples, os dados são convertidos para uma tabela de frequência. Posteriormente, as probabilidades dos eventos necessários para a classificação dos dados são calculadas e postas em outra tabela. Após, a equação de Naive-Bayes é usada para calcular  a probabilidade para cada classe. A classe com a maior probabilidade será a resposta.
-    <p>$$ p(c|X) = \frac{p(X|c)p(c)}{p(X)} $$
+    <p>$$p(c|X) = \frac{p(X|c)p(c)}{p(X)}$$
     <p>Na fórmula acima, p(c|X) é a probabilidade de c de acordo com o dado X, p(X|c) é a probabilidade do dado c sendo X verdade, p(c) é a probabilidade de c ser verdade e p(x) é  a probabilidade de X ser verdade.
     <p>Entre as vantagens deste algoritmo estão:
     <ul>
@@ -178,22 +177,22 @@ O funcionamento do algoritmo em si é simples, os dados são convertidos para um
     <p>Vamos analisar matematicamente o funcionamento de uma RNA. Observe o grafo com pesos abaixo:
     <img src="https://www.ime.usp.br/~pf/algoritmos_para_grafos/aulas/figs/iou-graph-10-nodes-and-20-edges.png" style="width: 250px">
     <br>
-    <p>Cada vértice seria um neurônio, composto pelos dados de entrada, pesos, um limite e uma saída. Podemos relacionar a saída pela fórmula a seguir, com “m” o número de neurônios que o vértice recebe em um sinal, xi o sinal e um peso sináptico entre o neurônio i e o neurônio que estamos analisando chamado de bias: $$ y = \sum{i=1}{m}w_ix_i + bias $$
+    <p>Cada vértice seria um neurônio, composto pelos dados de entrada, pesos, um limite e uma saída. Podemos relacionar a saída pela fórmula a seguir, com “m” o número de neurônios que o vértice recebe em um sinal, xi o sinal e um peso sináptico entre o neurônio i e o neurônio que estamos analisando chamado de bias: $$y = \sum{i=1}{m}w_ix_i + bias$$
     <p>Após isso, usa uma função de ativação que será responsável por dar a saída, se o valor de y for maior que um valor, ela manda um sinal para o próximo nível. A função de ativação exerce um papel crucial, pois além de controlar a saída, ele evita que a saída exceda certo valor e assim dispare todos os neurônios da rede.
 	<p>Entre os tipos de função de  ativação temos a limiar, que restringe a saída a valores binários (0 ou 1), linear por partes, que permite o valor variar em certo intervalo, sigmoidal, que também assume um valor entre 0 e 1, mas possui um balanceamento adequado entre um comportamento linear e não linear, e tangente hiperbólica, similar a sigmoidal, porém assume valores negativos. O uso de cada uma é determinado caso a caso.
-    <p>Limiar: $ f(u) = 
+    <p>Limiar: $f(u) = 
       \begin{cases}
           1, &se&u \geq0 \\
           x, &se&u>0 
-      \end{cases} $
-    <p>Linear por partes: $ f(u) = 
+      \end{cases}$
+    <p>Linear por partes: $f(u) = 
       \begin{cases}
           1, &se&u \geq+\frac{1}{2} \\
           u, &se&+\frac{1}{2}>u>-\frac{1}{2} \\
           x, &se&u \leq-\frac{1}{2} 
-      \end{cases} $
-    <p>Sigmoidal: $ f(x) = \frac{1}{1 + e^{-x}}$
-    <p>Tangente hiperbólica: $ f(u) = tanh(u) $
+      \end{cases}$
+    <p>Sigmoidal: $f(x) = \frac{1}{1 + e^{-x}}$
+    <p>Tangente hiperbólica: $f(u) = tanh(u)$
     <p>Como vantagens das redes neurais tem:
     <ul>
         <li>Capacidade de se adaptar: como as redes neurais podem ter seus pesos sinápticos alterados, se houver pequenas mudanças no ambiente a rede pode ser retreinada para continuar operando no ambiente.
@@ -331,8 +330,8 @@ Essa tecnologia ensina os computadores com métodos inspirados no funcionamento 
         <li>Se ocorrer alguma reatribuição, é preciso repetir a 4ª etapa, se não, está finalizado o modelo de clustering.
     </ol>
 	<p>Escolher um ótimo número K de clusters é uma tarefa difícil. Há algumas maneiras diferentes de escolher o número de grupos, mas iremos discutir o método mais apropriado.
-	<p>O Elbow Method, ou Método do Cotovelo é uma dos jeitos mais populares de encontrar um ótimo K-número. Esse método utiliza o conceito de valor WCSS (Within Cluster Sum of Squares), a soma dos quadrados intra-clusters, no português, que define a variação total entre um grupo. É calculado pela fórmula: $$ WCSS = ∑P_{i\,no\,Cluster1}\,distância(P_i\,C_1)^2 +  ∑P_{i\,no\,Cluster2}\,distância(P_i\,C_2)^2 + ∑P_{i\,no\,Cluster3}\, distância(P_i\,C_3)^2 $$
-    <p>$ ∑P_{i\,no\,Cluster1}\,distância(P_i\,C_1)^2 $ : É a soma do quadrado das distâncias entre cada ponto de dados e seus centróides entre o Cluster 1 e o mesmo para os outros termos.
+	<p>O Elbow Method, ou Método do Cotovelo é uma dos jeitos mais populares de encontrar um ótimo K-número. Esse método utiliza o conceito de valor WCSS (Within Cluster Sum of Squares), a soma dos quadrados intra-clusters, no português, que define a variação total entre um grupo. É calculado pela fórmula: $$WCSS = ∑P_{i\,no\,Cluster1}\,distância(P_i\,C_1)^2 +  ∑P_{i\,no\,Cluster2}\,distância(P_i\,C_2)^2 + ∑P_{i\,no\,Cluster3}\, distância(P_i\,C_3)^2$$
+    <p>$∑P_{i\,no\,Cluster1}\,distância(P_i\,C_1)^2$ : É a soma do quadrado das distâncias entre cada ponto de dados e seus centróides entre o Cluster 1 e o mesmo para os outros termos.
     <p>Para medir a distância entre os pontos de dados e o centróide, usamos métodos como a distância euclidiana ou a distância de Manhattan. Para o Método do Cotovelo, são seguidos os passos:
     <ol>
         <li>Executa o agrupamento K-means em um determinado conjunto de dados para diferentes valores de K (intervalos de 1-10).
