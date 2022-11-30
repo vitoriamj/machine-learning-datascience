@@ -33,8 +33,7 @@
         
         
 <ol>
-    
-   <li><h3>K-Nearest Neighbours (KNN)</h3></li>
+    <li><h3>K-Nearest Neighbours (KNN)</h3></li>
     <p>É um algoritmo que utiliza a proximidade para fazer classificações sobre algum tipo de dado, é normalmente usado como um algoritmo para classificar dados, partindo do princípio que dados similares estarão próximos um do outro. Bastante útil no reconhecimento de padrões, por exemplo, visto que os dados com um comportamento parecido não ficarão distantes.
     <p>Então para determinar essa proximidade, podemos calcular a distância entre esses dados usando alguns fatores e métodos. Entre os mais usados estão:
     <p>Distância euclidiana: mede a distância em linha reta entre os pontos consultados e os pontos sendo medidos: $$d(x,y)=\sqrt[]{\sum_{i=1}^{n}(y_i-x_i)^2}$$
@@ -65,10 +64,10 @@
     
    <li><h3>Naive-Bayes</h3></li>
     <p>O algoritmo de Naive-Bayes é um classificador probabilístico que é baseado no teorema de Bayes. Não é um apenas um algoritmo, mas um conjunto desses que compartilham um mesmo princípio, cada par de eventos que está sendo classificado é independente um do outro.
-    <p>O teorema de Bayes quer saber a probabilidade de um evento ocorrer, sabendo que outro evento ocorreu: $ p(A|B) = \frac{p(B|A)p(A)}{p(B)} $
+    <p>O teorema de Bayes quer saber a probabilidade de um evento ocorrer, sabendo que outro evento ocorreu: $p(A|B) = \frac{p(B|A)p(A)}{p(B)}$
 Naive assume que os eventos possuem independência entre si.
     <br>
-O funcionamento do algoritmo em si é simples, os dados são convertidos para uma tabela de frequência. Posteriormente, as probabilidades dos eventos necessários para a classificação dos dados são calculadas e postas em outra tabela. Após, a equação de Naive-Bayes é usada para calcular  a probabilidade para cada classe. A classe com a maior probabilidade será a resposta.
+O funcionamento do algoritmo em si é simples, os dados são convertidos para uma tabela de frequência. Posteriormente, as probabilidades dos eventos necessários para a classificação dos dados são calculadas e postas em outra tabela. Após, a equação de Naive-Bayes é usada para calcular a probabilidade para cada classe. A classe com a maior probabilidade será a resposta.
     <p>$$p(c|X) = \frac{p(X|c)p(c)}{p(X)}$$
     <p>Na fórmula acima, p(c|X) é a probabilidade de c de acordo com o dado X, p(X|c) é a probabilidade do dado c sendo X verdade, p(c) é a probabilidade de c ser verdade e p(x) é  a probabilidade de X ser verdade.
     <p>Entre as vantagens deste algoritmo estão:
@@ -95,7 +94,8 @@ O funcionamento do algoritmo em si é simples, os dados são convertidos para um
     
     
    <li><h3>Suport Vector Machine (SVM)</h3></li>    
-    <p>O SVM (Support Vector Machine) é um algoritmo usado tanto para regressão quanto para classificação. Esse algoritmo busca achar um hiperplano entre pontos de dados, que irá classificar os dados. Se tivermos em 2 dimensões o hiperplano será uma reta, e em 3 dimensões um plano 2D. O algoritmo busca achar entre os hiperplanos existentes aquele com a maior distância possível entre os dados distintos. ![teste](https://static.javatpoint.com/tutorial/machine-learning/images/support-vector-machine-algorithm5.png)
+    <p>O SVM (Support Vector Machine) é um algoritmo usado tanto para regressão quanto para classificação. Esse algoritmo busca achar um hiperplano entre pontos de dados, que irá classificar os dados. Se tivermos em 2 dimensões o hiperplano será uma reta, e em 3 dimensões um plano 2D. O algoritmo busca achar entre os hiperplanos existentes aquele com a maior distância possível entre os dados distintos.
+	    ![teste](https://static.javatpoint.com/tutorial/machine-learning/images/support-vector-machine-algorithm5.png)
 	<p>Em algumas situações pode ser complicado separar os pontos em 2 dimensões por uma reta de uma maneira satisfatória. Para isso, pode-se utilizar algumas técnicas, que leva os pontos para 3 dimensões, encontrar o hiperplano e transformar os pontos em 2 dimensões. Por exemplo imagine que temos um  conjunto, o qual está separados em 2 categorias azul e vermelho, porém, inicialmente, não temos a informação de quais pontos são vermelhos e quais são azuis. Dependendo da configuração deles no plano 2D, é impossível traçar uma reta capaz de separar os pontos azuis e vermelhos, porém se colocar os pontos em 3 dimensões, como a figura abaixo:
     <img src="https://www.researchgate.net/profile/Aldemon-Bonifacio/publication/318598388/figure/fig1/AS:614057111457801@1523414032621/Figura-215-Classicacao-perfeita-pelo-hiperplano-otimo-do-SVM-com-kernel-nao-linear.png" style="width: 300px">
     <p>Terá uma nítida separação entre os pontos. Podemos então encontrar o hiperplano e retornar em 2 dimensões, com definição entre pontos azuis e vermelhos encontrada. Essa manobra de usar 3 dimensões para encontrar as diferenças no conjunto dados  é chamada de Truque de Kernel e é responsável por dar uma versatilidade bem maior para os algoritmos de SVM.
