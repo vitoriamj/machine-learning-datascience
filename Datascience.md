@@ -202,7 +202,7 @@
     		<img src="https://user-images.githubusercontent.com/62900693/205035068-19db67d7-e82a-41e8-851a-c288e935bf04.png" width="250px">
     		<br>
 		<br>
-    		<p>Cada vértice seria um neurônio, composto pelos dados de entrada, pesos, um limite e uma saída. Podemos relacionar a saída pela fórmula a seguir, com “m” o número de neurônios que o vértice recebe em um sinal, xi o sinal e um peso sináptico entre o neurônio i e o neurônio que estamos analisando chamado de bias: $$y = \sum{i=1}{m}w_ix_i + bias$$
+    		<p>Cada vértice seria um neurônio, composto pelos dados de entrada, pesos, um limite e uma saída. Podemos relacionar a saída pela fórmula a seguir, com “m” o número de neurônios que o vértice recebe em um sinal, xi o sinal e um peso sináptico entre o neurônio i e o neurônio que estamos analisando chamado de bias: $$y = \sum_{i=1}^{m}w_ix_i + bias$$
 		<p>Após isso, usa uma função de ativação que será responsável por dar a saída, se o valor de y for maior que um valor, ela manda um sinal para o próximo nível. A função de ativação exerce um papel crucial, pois além de controlar a saída, ele evita que a saída exceda certo valor e assim dispare todos os neurônios da rede.
 		<p>Entre os tipos de função de  ativação temos a limiar, que restringe a saída a valores binários (0 ou 1), linear por partes, que permite o valor variar em certo intervalo, sigmoidal, que também assume um valor entre 0 e 1, mas possui um balanceamento adequado entre um comportamento linear e não linear, e tangente hiperbólica, similar a sigmoidal, porém assume valores negativos. O uso de cada uma é determinado caso a caso.
 		<p>Limiar: $f(u) = 
@@ -263,7 +263,8 @@
         			<li>Análise Pragmática: busca nas outras frases a compreensão do texto que falta àquela frase em análise, procurando coerência textual e análise do discurso.
     			</ul>
 		</div>
-    		<img src="https://files.passeidireto.com/354091cd-ff8c-4181-a591-a221989a12fb/bg3.png" style="width: 150px">
+		<br>
+    		<img width="170" alt="image3" src="https://user-images.githubusercontent.com/62900693/205035554-fab4aa81-4fec-4ddf-b8f1-234b1cd5f8e8.png">
 		<br>
     		<p>A tecnologia de Processamento de Linguagem Natural, alimentada pelo Machine Learning, contém suas vantagens e desvantagens.
     		<p>Entre suas vantagens, podemos citar:
@@ -351,7 +352,7 @@
     		<p>Essa ferramenta recebe o conjunto de dados não rotulado como entrada, determina a divisão do conjunto de dados em K-números de clusters com centróides iniciais aleatórios, em um processo iterativo. Depois, atribui a cada ponto de dados o seu K-centro mais próximo.
     		<p>O conjunto desses pontos de dados que estão próximos ao K-centro específico cria um cluster. Logo, grupos de dados com diferentes centros e características estão distantes entre si.
 		<p>O clustering permite encontrar e analisar os grupos que foram formados. Examinando o centróide de cada cluster, podemos interpretar qualitativamente que tipo de grupo cada cluster representa.
-    		<img src="https://static.javatpoint.com/tutorial/machine-learning/images/k-means-clustering-algorithm-in-machine-learning.png" style="width:350px">
+    		<img src="https://user-images.githubusercontent.com/62900693/205035920-789cd301-cd4e-4ba9-ad7d-9bdcd49f5bb2.png" width="350px">
     		<p>Para essa tarefa de clustering, o trabalho é dividido em etapas:
     		<ol>
         		<li>K é selecionado e predefinido para decidir o número de clusters. Posteriormente, veremos como esse número é definido.
@@ -372,7 +373,7 @@
 			<li>O ponto agudo da dobra ou um ponto do gráfico se parece com um braço, então esse ponto é considerado o melhor valor de K.
 		</ol>
     		<p>Como o gráfico mostra a curva acentuada, que se parece com um cotovelo, é conhecido como Método do Cotovelo. O gráfico desse processo se parece com a imagem a seguir:
-    		<img src="https://static.javatpoint.com/tutorial/machine-learning/images/k-means-clustering-algorithm-in-machine-learning13.png" style="width:300px">
+    		<img src="https://user-images.githubusercontent.com/62900693/205036118-59d0d3df-d3a6-4075-9da3-b78e8a68ebb8.png" width="300px">
     		<p>Entre as vantagens do K-Means, temos:
 		<div>
 			<ul>
@@ -412,14 +413,26 @@
     		<p>A seguir, segue-se do exemplo acima que os nós na parte de baixo seriam os dados iniciais e, à medida que subimos na hierarquia, elas se juntam a outros clusters e assim sucessivamente até atingir o topo.
     		<p>Para usarmos essa técnica não precisamos pré-definir os números de clusters, tal qual a hierarquia entre eles, o algoritmo irá procurar essas relações automaticamente.
     		<p>O funcionamento do algoritmo segue os seguintes procedimentos: cada dado inicial será considerado como um cluster, então será calculada a distância entre cada ponto, podendo ser a distância euclidiana ou outras, como a de Minkowski, a depender da situação. Após os cálculos das distâncias, colocaremos essas distância numa matriz, os 2 clusters mais próximos se juntam e criam um nó, e repete-se o processo. Recalcula-se as distâncias e atualiza-se a matriz, até se obter apenas um cluster. O resultado será um dendrograma.
-    		<p style="text-align: center">Exemplo de matriz distância</p>
-    		<img src="https://miro.medium.com/max/640/1*W1fEsWccONK6T2cxJ9vJ_g.webp" style="width: 250px">
-    		<p style="text-align: center">Após juntar os clusters mais próximos</p>
-    		<img src="https://miro.medium.com/max/640/1*yWU8ooQ_7ayvco3uDPBLeA.webp" style="width: 250px">
-    		<p style="text-align: center">Processo de construção</p>
-   		<img src="https://s3.amazonaws.com/higherlogicdownload/IMWUC/UploadedImages/ayiDw9RsRI2yU2MWRbvS_temp.png" style="width: 200px">
-    		<p style="text-align: center">Dendrograma</p>
-    		<img src="https://www.edrawsoft.com/images/creatediagram/dendrogram-template.png" style="width: 300px">
+    		<p>Exemplo de matriz distância</p>
+		<br>
+    		<img src="https://user-images.githubusercontent.com/62900693/205036289-0c70a666-2ff0-4a0a-9d1d-30836ed71b12.png" width="250px">
+		<br>
+		<br>
+    		<p>Após juntar os clusters mais próximos</p>
+		<br>
+    		<img src="https://user-images.githubusercontent.com/62900693/205036565-8c0f8a61-11d3-47d2-a948-e0726712741d.png" width="250px">
+		<br>
+		<br>
+    		<p>Processo de construção</p>
+		<br>
+   		<img src="https://user-images.githubusercontent.com/62900693/205036805-722b1ca5-deab-4afa-a0c9-2e362550b5c9.png" width="200px">
+		<br>
+		<br>
+    		<p>Dendrograma</p>
+		<br>
+    		<img src="https://user-images.githubusercontent.com/62900693/205036983-8050242f-19f6-4a3e-93c4-fa760588b6d4.png" width="300px">
+		<br>
+		<br>
     		<p>É importante ressaltar que o dendrograma nos fornece o número de clusters dos dados e não um número mais otimizado. Uma das formas de identificar o número de cluster é realizar um corte horizontal no dendrograma. O número de pontos que ele interceptará será a resposta. Interpretar os resultados ainda ficará a cargo do cientista de dados.
 		<p>As vantagens:
 		<div>
@@ -443,11 +456,16 @@
     		<p>Nos algoritmos vistos até o momento, separamos dados mais próximos uns dos outros em grupos. Porém, em algumas situações, os dados estão aninhados, ou seja, muito próximos um dos outros, mesmo sendo diferentes. O DBSCAN é um algoritmo que visa resolver os problemas em que essa situação acontece.
 		<p>Este algoritmo aceita qualquer função de distância, ficando a cargo do cientista de dados escolher qual melhor se encaixa no problema. A ideia principal é que cada ponto de um dado cluster, para uma certa distância, possuirá um número mínimo de pontos. Isso implica que a densidade do vizinho precisa exceder um limiar.
     		<p>Para entender melhor o algoritmo, vamos antes entender alguns conceitos. A vizinhança do ponto são todos os pontos que estão a uma distância menor que um dado valor, ou seja, esteja interna a um círculo de raio r, e com o centro no ponto.
-   		<img src="https://i.imgur.com/GHITmzG.png" style="width: 250px">
+		<br>
+		<br>
+   		<img src="https://user-images.githubusercontent.com/62900693/205037377-9ec81395-3fd2-4d79-abe7-76a117426349.png" width="250px">
+		<br>
     		<p>Na imagem acima, estão sendo analisados os pontos q e p. Exigem dois tipos de pontos num cluster: pontos centrais e pontos de borda. Se na vizinhança de um ponto possuir no mínimo um número pré-definido de pontos, ele é um ponto central, do contrário, ponto de borda. Um ponto q é alcançado por densidade se estiver na vizinhança de um ponto central. O conjunto de pontos conectado por densidade definirá um cluster.
-    		<img src="https://i.imgur.com/pLe6WKt.png" style="width: 250px">
-    		<p style="text-align: center">Conexão por densidade no método DBSCAN</p>
+		<p>Conexão por densidade no método DBSCAN</p>
+		<br>
+    		<img src="https://user-images.githubusercontent.com/62900693/205037210-ae6cf6ca-c074-41ac-a06a-2302db6269ab.png" width="250px">
     		<br>
+		<br>
     		<p>Outra definição importante é a de ruído, que seriam os pontos isolados que não podem ser alcançados por densidade. Na figura acima, observa-se dois pontos de ruído.
     		<p>Na hora de implementar o algoritmo precisamos definir dois parâmetros que são: o número mínimo de pontos que um ponto deve ter na sua vizinhança para ser considerado um ponto central e, claro, o raio da círculo que irá definir o limite da vizinhança de um ponto. Isso precisa ser feito com cuidado, visto que, se escolher um raio muito grande, todos os pontos podem ser alcançados por densidade. Existem algumas técnicas para ajudar a definir esses parâmetros.
 		<p>O algoritmo em si consiste em encontrar os clusters analisando a vizinhança de cada ponto na base de dados, começando por um ponto p qualquer. Se p for  um ponto central, então um novo cluster é criado.
