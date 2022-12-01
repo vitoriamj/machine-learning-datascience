@@ -441,6 +441,7 @@
 				<li>Podemos obter classificações bastante significativas.
 			</ul>
 		</div>
+		<br>
     		<p>Desvantagens:
 		<div>
 			<ul>
@@ -478,6 +479,7 @@
 				<li>Eficiente para encontrar ruído.
 			</ul>
 		</div>
+		<br>
 		<p>Como desvantagem:
 		<div>
 			<ul>
