@@ -461,7 +461,6 @@
 		<br>
     		<p>Na imagem acima, estão sendo analisados os pontos q e p. Exigem dois tipos de pontos num cluster: pontos centrais e pontos de borda. Se na vizinhança de um ponto possuir no mínimo um número pré-definido de pontos, ele é um ponto central, do contrário, ponto de borda. Um ponto q é alcançado por densidade se estiver na vizinhança de um ponto central. O conjunto de pontos conectado por densidade definirá um cluster.
 		<p>Conexão por densidade no método DBSCAN</p>
-		<br>
     		<img src="https://user-images.githubusercontent.com/62900693/205037210-ae6cf6ca-c074-41ac-a06a-2302db6269ab.png" width="250px">
     		<br>
 		<br>
