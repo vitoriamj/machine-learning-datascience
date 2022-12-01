@@ -417,22 +417,18 @@
     		<p>Para usarmos essa técnica não precisamos pré-definir os números de clusters, tal qual a hierarquia entre eles, o algoritmo irá procurar essas relações automaticamente.
     		<p>O funcionamento do algoritmo segue os seguintes procedimentos: cada dado inicial será considerado como um cluster, então será calculada a distância entre cada ponto, podendo ser a distância euclidiana ou outras, como a de Minkowski, a depender da situação. Após os cálculos das distâncias, colocaremos essas distância numa matriz, os 2 clusters mais próximos se juntam e criam um nó, e repete-se o processo. Recalcula-se as distâncias e atualiza-se a matriz, até se obter apenas um cluster. O resultado será um dendrograma.
     		<p>Exemplo de matriz distância</p>
-		<br>
     		<img src="https://user-images.githubusercontent.com/62900693/205036289-0c70a666-2ff0-4a0a-9d1d-30836ed71b12.png" width="250px">
 		<br>
 		<br>
     		<p>Após juntar os clusters mais próximos</p>
-		<br>
     		<img src="https://user-images.githubusercontent.com/62900693/205036565-8c0f8a61-11d3-47d2-a948-e0726712741d.png" width="250px">
 		<br>
 		<br>
     		<p>Processo de construção</p>
-		<br>
    		<img src="https://user-images.githubusercontent.com/62900693/205036805-722b1ca5-deab-4afa-a0c9-2e362550b5c9.png" width="200px">
 		<br>
 		<br>
     		<p>Dendrograma</p>
-		<br>
     		<img src="https://user-images.githubusercontent.com/62900693/205036983-8050242f-19f6-4a3e-93c4-fa760588b6d4.png" width="300px">
 		<br>
 		<br>
