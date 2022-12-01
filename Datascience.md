@@ -99,12 +99,10 @@
 		<br>
 		<img src="https://user-images.githubusercontent.com/62900693/205032441-ff250ffe-b72b-47c4-9f72-9ea5974a80c3.png" width="250px">
 		<br>
-		<br>
 		<p>Em algumas situações pode ser complicado separar os pontos em 2 dimensões por uma reta de uma maneira satisfatória. Para isso, pode-se utilizar algumas técnicas, que leva os pontos para 3 dimensões, encontrar o hiperplano e transformar os pontos em 2 dimensões. Por exemplo imagine que temos um  conjunto, o qual está separados em 2 categorias azul e vermelho, porém, inicialmente, não temos a informação de quais pontos são vermelhos e quais são azuis. Dependendo da configuração deles no plano 2D, é impossível traçar uma reta capaz de separar os pontos azuis e vermelhos, porém se colocar os pontos em 3 dimensões, como a figura abaixo:
 		<br>
 		<br>
 		<img src="https://user-images.githubusercontent.com/62900693/205032699-ae9229fb-c68f-423d-b056-deab6423dbef.png" width="300px">
-		<br>
 		<br>
 		<p>Terá uma nítida separação entre os pontos. Podemos então encontrar o hiperplano e retornar em 2 dimensões, com definição entre pontos azuis e vermelhos encontrada. Essa manobra de usar 3 dimensões para encontrar as diferenças no conjunto dados  é chamada de Truque de Kernel e é responsável por dar uma versatilidade bem maior para os algoritmos de SVM.
 		<p>Como vantagens destacam-se:
