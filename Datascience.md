@@ -38,16 +38,16 @@
 				<li>Boa capacidade de adaptação à medida que novos dados são inseridos;
 				<li>Poucos hiperparâmetros (apenas um valor para K e uma distância métrica).
     			</ul>
-			<br>
 		</div>
+		<br>
     		<p>As desvantagens acabam sendo:
     		<div>
 			<ul>
 				<li>Requer quantidades significativas de memória e armazenamento, o que aumenta o custo financeiro (mais equipamento) e de processamento;
 				<li>Não consegue apresentar bons resultados com dados com uma grande dimensionalidade, pois após o algoritmo se ater a um número otimizado de resultados, tenta aumentar o erro na classificação dos dados, especialmente se tratando de amostras pequenas.
 			</ul>
-			<br>
 		</div>
+		<br>
     		<p>Normalmente os algoritmos de K-NN, usam uma priority queue para deixar a complexidade em $O(n*log(k))$
     		<p>Os algoritmos de K-NN são usados principalmente em:
     		<div>
@@ -56,8 +56,8 @@
 				<li>Finanças: Bancos usam algoritmos para saber o risco de inadimplência de clientes na hora de fornecer um empréstimo, usado previsão de bolsa de valores e até mesmo para analisar possíveis esquemas de lavagem de dinheiro;
 				<li>Saúde: Análise da probabilidade de pacientes desenvolverem alguma doença genética, verificando anomalias no DNA.
 			</ul>
-			<br>
 		</div>
+		<br>
 		<li><h3>Naive-Bayes</h3></li>
 		<p>O algoritmo de Naive-Bayes é um classificador probabilístico que é baseado no teorema de Bayes. Não é um apenas um algoritmo, mas um conjunto desses que compartilham um mesmo princípio, cada par de eventos que está sendo classificado é independente um do outro.
 		<p>O teorema de Bayes quer saber a probabilidade de um evento ocorrer, sabendo que outro evento ocorreu: $p(A|B) = \frac{p(B|A)p(A)}{p(B)}$
@@ -74,6 +74,7 @@
 				<li>Funciona melhor quando a entrada de dados é categórica e não númerica, isto é, pode ser divida em grupos, como sexo, idade.
 			</ul>
 		</div>
+		<br>
 		<p>Já pelo lados das desvantagens destacam-se:
 		<div>
 			<ul>
@@ -82,6 +83,7 @@
 				<li>O teorema assume que os eventos são 100% independentes, porém no mundo real é bem raro que os eventos sejam completamente independentes.
 			</ul>
 		</div>
+		<br>
 		<p>Esse algoritmo acaba por ser muito utilizado para:
 		<div>
 			<ul>
@@ -113,6 +115,7 @@
 				<li>Diferentes funções de Kernel podem ser especificadas para as funções de decisão, pode usar algumas funções específicas também, o que aumenta a versatilidade e a precisão do algoritmo.
 			</ul>
 		</div>
+		<br>
 		<p>Pelo ponto de vista das desvantagens:
 		<div>
 			<ul>
@@ -120,6 +123,7 @@
 				<li>Não funciona muito bem quando os dados têm mais ruído, isto é, as classes de destino estão mais sobrepostas.
 			</ul>
 		</div>
+		<br>
 		<p>Os algoritmos de SVM são bastante usados em vários campos:
 		<div>
 			<ul>
@@ -151,6 +155,7 @@
 					<li>O processo é repetido até a construção do último nó, excluindo das escolhas randômicas as variáveis selecionadas anteriormente.
 				</ol>
 			</div>
+			<br>
         		<li>Escolha o número de árvores de decisão que se deseja construir.
         		<li>Os dois primeiros passos são repetidos na construção das outras árvores de decisão.
         		<li>Para cada árvore de decisão, são encontradas previsões, os resultados. Em problemas de regressão será realizada a média dos valores previstos, e esta média informada será o resultado final e em problemas de classificação o resultado com maioria dos votos será o escolhido.
@@ -163,6 +168,7 @@
 				<li>É capaz de lidar com grande volumes de dados e com alta dimensionalidade.
 			</ul>	
 		</div>
+		<br>
     		<p>Entre as desvantagens desse algoritmo, temos:
 		<div>
 			<ul>
@@ -171,6 +177,7 @@
 				<li>Mais complexo: A previsão de uma única árvore de decisão é mais fácil de interpretar quando comparada a uma floresta delas.
 			</ul>
 		</div>
+		<br>
     		<p>Essa ferramenta do Machine Learning auxilia na melhor tomada de decisões, sendo algumas de suas aplicações:
 		<div>
 			<ul>
@@ -222,6 +229,7 @@
         			<li>Uma RNA implementada em hardware pode ser considerada tolerante a falhas em casos gerais.
     			</ul>
 		</div>
+		<br>
     		<p>De desvantagens:
 		<div>
     			<ul>
@@ -231,6 +239,7 @@
         			<li>Pode-se obter resultados absurdos, sendo necessário supervisão humana para resolver o problema.
     			</ul>
 		</div>
+		<br>
  		<p>As RNA’s são usadas em detecção de fraude em cartões de crédito, otimização de logística para redes de transporte, processamento de linguagem natural, marketing direcionado, sistemas de controle, visão computacional para interpretar imagens e vídeos etc.
     		<br>
    		<br>
@@ -322,6 +331,7 @@
         			<li>As Redes Neurais Profundas são excelentes em aprender sem regras, sendo muito mais eficaz do que outros tipos de abordagens de Machine Learning.
     			</ul>
 		</div>
+		<br>
     		<p>Apesar de suas vantagens, as redes neurais profundas têm várias desvantagens:
 		<div>
     			<ul>
@@ -331,6 +341,7 @@
         			<li>Uma caixa preta é um dispositivo ou sistema que permite que você veja a entrada/saída, mas não o funcionamento intermediário. Os algoritmos redes neurais profundas encontram problemas de caixa preta, em que se sabe a entrada/saída, mas não o funcionamento intermediário, tornando-os difíceis de depurar e entender como eles tomam decisões. Isso faz com que os programadores não tenham noção quando tentam entender por que certos aspectos falham. Embora possa não ser um problema na realização de tarefas triviais, em casos como a detecção de tumores, o médico precisa saber por que o modelo marcou algumas áreas e por que não em outras em um relatório de varredura.
     			</ul>
 		</div>
+		<br>
 		<p>O Deep Learning, além de muito falado atualmente, é uma excelente ferramenta que proporciona diversas aplicações. Entre elas:
 		<div>
     			<ul>
@@ -388,6 +399,7 @@
 				<li>Generalização para clusters de diferentes formas e tamanhos.
 			</ul>
 		</div>
+		<br>
     		<p>As desvantagens são:
 		<div>
     			<ul>
@@ -396,6 +408,7 @@
 				<li>Conforme o número de dimensões (características dos dados) aumenta, a escalabilidade da ferramenta diminui.
     			</ul>
 		</div>
+		<br>
     		<p>O simples e eficiente K-Means Clustering pode ser utilizado para ferramentas de recomendações, como, em serviços de streaming de músicas, agrupar tipos ou gêneros de músicas similares aos do padrão do usuário e recomendar novas escolhas. Além disso, essa tecnologia, tem aplicações que incluem:
 		<div>
 			<ul>
@@ -449,6 +462,7 @@
 				<li>Ruim para grande quantidade de dados, complexidade O( n2log(n) ).
 			</ul>
 		</div>
+		<br>
     		<p>Os algoritmos de clustering são bastante usados na biologia, principalmente, para estudos genéticos, visto que estudar a evolução de organismos através do DNA é extremamente facilitado pela forma que o algoritmo funciona naturalmente. Portanto, é usado no estudo de vírus para desenvolver novos tratamentos, no análises de tumores.
 		<br>
 		<br>
@@ -488,6 +502,7 @@
 				<li>Não funciona bem para dados multidimensionais.
 			</ul>
 		</div>
+		<br>
 		<p>É usado em na literatura científica, em imagens de satélite, cristalografia de raios-x e detecção de anomalias em dados que envolvem temperatura.
 		<br>   
 		<br>     
