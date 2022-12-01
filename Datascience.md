@@ -141,7 +141,6 @@
 		<br>
     		<img src="https://user-images.githubusercontent.com/62900693/205032973-00119ab0-adce-4afe-9916-a2f651868093.png" width="300px">
 		<br>
-		<br>
     		<p>O processo de funcionamento dos algoritmos de Random Forest, são divididos nas seguintes etapas:
     		<ol>
 	    		<li>Selecione uma amostra aleatória de dados de treino no dataset. Aqui, é utilizado o método de reamostragem, em que as amostras selecionadas podem ser repetidas na seleção.
@@ -199,7 +198,6 @@
 		<br>
     		<img src="https://user-images.githubusercontent.com/62900693/205035068-19db67d7-e82a-41e8-851a-c288e935bf04.png" width="250px">
     		<br>
-		<br>
     		<p>Cada vértice seria um neurônio, composto pelos dados de entrada, pesos, um limite e uma saída. Podemos relacionar a saída pela fórmula a seguir, com “m” o número de neurônios que o vértice recebe em um sinal, xi o sinal e um peso sináptico entre o neurônio i e o neurônio que estamos analisando chamado de bias: $$y = \sum_{i=1}^{m}w_ix_i + bias$$
 		<p>Após isso, usa uma função de ativação que será responsável por dar a saída, se o valor de y for maior que um valor, ela manda um sinal para o próximo nível. A função de ativação exerce um papel crucial, pois além de controlar a saída, ele evita que a saída exceda certo valor e assim dispare todos os neurônios da rede.
 		<p>Entre os tipos de função de  ativação temos a limiar, que restringe a saída a valores binários (0 ou 1), linear por partes, que permite o valor variar em certo intervalo, sigmoidal, que também assume um valor entre 0 e 1, mas possui um balanceamento adequado entre um comportamento linear e não linear, e tangente hiperbólica, similar a sigmoidal, porém assume valores negativos. O uso de cada uma é determinado caso a caso.
