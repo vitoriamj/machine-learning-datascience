@@ -262,6 +262,7 @@
 		<br>
     		<img width="170" alt="image3" src="https://user-images.githubusercontent.com/62900693/205035554-fab4aa81-4fec-4ddf-b8f1-234b1cd5f8e8.png">
 		<br>
+		<br>
     		<p>A tecnologia de Processamento de Linguagem Natural, alimentada pelo Machine Learning, contém suas vantagens e desvantagens.
     		<p>Entre suas vantagens, podemos citar:
 		<div>
@@ -348,7 +349,9 @@
     		<p>Essa ferramenta recebe o conjunto de dados não rotulado como entrada, determina a divisão do conjunto de dados em K-números de clusters com centróides iniciais aleatórios, em um processo iterativo. Depois, atribui a cada ponto de dados o seu K-centro mais próximo.
     		<p>O conjunto desses pontos de dados que estão próximos ao K-centro específico cria um cluster. Logo, grupos de dados com diferentes centros e características estão distantes entre si.
 		<p>O clustering permite encontrar e analisar os grupos que foram formados. Examinando o centróide de cada cluster, podemos interpretar qualitativamente que tipo de grupo cada cluster representa.
+		<br>
     		<img src="https://user-images.githubusercontent.com/62900693/205035920-789cd301-cd4e-4ba9-ad7d-9bdcd49f5bb2.png" width="350px">
+		<br>
     		<p>Para essa tarefa de clustering, o trabalho é dividido em etapas:
     		<ol>
         		<li>K é selecionado e predefinido para decidir o número de clusters. Posteriormente, veremos como esse número é definido.
@@ -369,7 +372,9 @@
 			<li>O ponto agudo da dobra ou um ponto do gráfico se parece com um braço, então esse ponto é considerado o melhor valor de K.
 		</ol>
     		<p>Como o gráfico mostra a curva acentuada, que se parece com um cotovelo, é conhecido como Método do Cotovelo. O gráfico desse processo se parece com a imagem a seguir:
+		<br>
     		<img src="https://user-images.githubusercontent.com/62900693/205036118-59d0d3df-d3a6-4075-9da3-b78e8a68ebb8.png" width="300px">
+		<br>
     		<p>Entre as vantagens do K-Means, temos:
 		<div>
 			<ul>
