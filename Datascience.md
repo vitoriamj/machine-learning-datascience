@@ -208,19 +208,22 @@
     		<p>Cada vértice seria um neurônio, composto pelos dados de entrada, pesos, um limite e uma saída. Podemos relacionar a saída pela fórmula a seguir, com “m” o número de neurônios que o vértice recebe em um sinal, xi o sinal e um peso sináptico entre o neurônio i e o neurônio que estamos analisando chamado de bias: $$y = \sum_{i=1}^{m}w_ix_i + bias$$
 		<p>Após isso, usa uma função de ativação que será responsável por dar a saída, se o valor de y for maior que um valor, ela manda um sinal para o próximo nível. A função de ativação exerce um papel crucial, pois além de controlar a saída, ele evita que a saída exceda certo valor e assim dispare todos os neurônios da rede.
 		<p>Entre os tipos de função de  ativação temos a limiar, que restringe a saída a valores binários (0 ou 1), linear por partes, que permite o valor variar em certo intervalo, sigmoidal, que também assume um valor entre 0 e 1, mas possui um balanceamento adequado entre um comportamento linear e não linear, e tangente hiperbólica, similar a sigmoidal, porém assume valores negativos. O uso de cada uma é determinado caso a caso.
-		<p>Limiar: $f(u) = 
-      			\begin{cases}
-          			1, &se&u \geq0 \\
-          			x, &se&u>0 
-      			\end{cases}$
-    		<p>Linear por partes: $f(u) =
-			\begin{cases}
-				1, & \mbox{se} & u\geq+\frac{1}{2} \\
-				u, &se&+\frac{1}{2}>u>-\frac{1}{2} \\
-				x, &se&u \leq-\frac{1}{2} 
-			\end{cases}$
-    		<p>Sigmoidal: $f(x) = \frac{1}{1 + e^{-x}}$
-    		<p>Tangente hiperbólica: $f(u) = tanh(u)$
+		<p>Limiar:
+		<br>
+		<img src="https://user-images.githubusercontent.com/62900693/205043523-93b53f53-4ca4-4fcb-9828-39f9549afba5.png" width="200px">
+		<br>
+    		<p>Linear por partes:
+		<br>
+		<img src="https://user-images.githubusercontent.com/62900693/205043695-e2d0c0ea-3242-4961-9341-6406dfb153d6.png" width="200px">
+		<br>
+    		<p>Sigmoidal:
+		<br>
+		<img src="https://user-images.githubusercontent.com/62900693/205044111-37673ae6-51ba-4e1a-941c-e87b7fbe1edc.png" width="200px">
+		<br>
+    		<p>Tangente hiperbólica:
+		<br>
+		<img src="https://user-images.githubusercontent.com/62900693/205044211-ff5a6d38-417c-4db1-9682-8bf5edb588d6.png" width="200px">
+		<br>
     		<p>Como vantagens das redes neurais tem:
 		<div>
     			<ul>
