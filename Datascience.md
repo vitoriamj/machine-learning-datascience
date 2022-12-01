@@ -350,6 +350,7 @@
     		<p>O conjunto desses pontos de dados que estão próximos ao K-centro específico cria um cluster. Logo, grupos de dados com diferentes centros e características estão distantes entre si.
 		<p>O clustering permite encontrar e analisar os grupos que foram formados. Examinando o centróide de cada cluster, podemos interpretar qualitativamente que tipo de grupo cada cluster representa.
 		<br>
+		<br>
     		<img src="https://user-images.githubusercontent.com/62900693/205035920-789cd301-cd4e-4ba9-ad7d-9bdcd49f5bb2.png" width="350px">
 		<br>
     		<p>Para essa tarefa de clustering, o trabalho é dividido em etapas:
@@ -372,6 +373,7 @@
 			<li>O ponto agudo da dobra ou um ponto do gráfico se parece com um braço, então esse ponto é considerado o melhor valor de K.
 		</ol>
     		<p>Como o gráfico mostra a curva acentuada, que se parece com um cotovelo, é conhecido como Método do Cotovelo. O gráfico desse processo se parece com a imagem a seguir:
+		<br>
 		<br>
     		<img src="https://user-images.githubusercontent.com/62900693/205036118-59d0d3df-d3a6-4075-9da3-b78e8a68ebb8.png" width="300px">
 		<br>
