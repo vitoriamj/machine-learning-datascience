@@ -140,7 +140,10 @@
 		<p>É baseado no Método Ensemble, que é um processo que combina a saída de várias árvores de decisão para chegar a um único resultado. O maior número de árvores na floresta leva a uma maior precisão e evita o problema de overfitting.
 		<br><i>*Overfitting: cenário em que o modelo aprende tão bem as relações existentes no treino, que acabou apenas decorando o que deveria ser feito, e, ao receber as informações das variáveis preditoras nos dados de teste, o modelo tenta aplicar as mesmas regras decoradas, porém com dados diferentes esta regra não tem validade, e o desempenho é afetado.</i>
     		<br>
+		<br>
     		<img src="https://user-images.githubusercontent.com/62900693/205032973-00119ab0-adce-4afe-9916-a2f651868093.png" width="300px">
+		<br>
+		<br>
     		<p>O processo de funcionamento dos algoritmos de Random Forest, são divididos nas seguintes etapas:
     		<ol>
 	    		<li>Selecione uma amostra aleatória de dados de treino no dataset. Aqui, é utilizado o método de reamostragem, em que as amostras selecionadas podem ser repetidas na seleção.
@@ -184,17 +187,21 @@
 		<li><h3>Redes Neurais Artificiais (RNA)</h3></li>
 		<p>As redes neurais artificiais são algoritmos que tentam emular o funcionamento de um cérebro. Para isso são utilizados grafos. São constituídos por camadas, sendo uma de entrada, outra de saída e uma ou mais camadas ocultas.
     		<p>Os vértices do grafo seriam os neurônios, possuem um valor limite de saída e conectam-se a outros por arestas com peso. Uma RNA possui 5 partes gerais, as conexões entre os neurônios, cada uma possuindo um peso sináptico e um integrador, que realiza a soma dos sinais de entrada sendo ponderado pelos pesos sinápticos. A função de ativação responsável por dar a saída do neurônio, é um bias que será aplicado externamente a cada neurônio, para aumentar ou diminuir a entrada.
-    		<p  style="text-align: center">Rede Neural com 3 camadas
+    		<p>Rede Neural com 3 camadas
 		<br>
-    		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Neural_network.svg/1200px-Neural_network.svg.png" style="width: 250px">
+    		<img src="https://user-images.githubusercontent.com/62900693/205034446-cf46de82-8fb2-4673-af42-13952ef36aba.png" width="250px">
     		<br>
-    		<p style="text-align: center">Rede Neural com 5 camadas
 		<br>
-    		<img src="https://1.cms.s81c.com/sites/default/files/2021-01-06/ICLH_Diagram_Batch_01_03-DeepNeuralNetwork-WHITEBG.png" style="width: 280px">
+    		<p>Rede Neural com 5 camadas
+		<br>
+    		<img src="https://user-images.githubusercontent.com/62900693/205034810-69b2260c-fb08-47ad-abfb-491be51a7972.png" width="280px">
+		<br>
+		<br>
     		<p>Vamos analisar matematicamente o funcionamento de uma RNA. Observe o grafo com pesos abaixo:
 		<br>
-    		<img src="https://www.ime.usp.br/~pf/algoritmos_para_grafos/aulas/figs/iou-graph-10-nodes-and-20-edges.png" style="width: 250px">
+    		<img src="https://user-images.githubusercontent.com/62900693/205035068-19db67d7-e82a-41e8-851a-c288e935bf04.png" width="250px">
     		<br>
+		<br>
     		<p>Cada vértice seria um neurônio, composto pelos dados de entrada, pesos, um limite e uma saída. Podemos relacionar a saída pela fórmula a seguir, com “m” o número de neurônios que o vértice recebe em um sinal, xi o sinal e um peso sináptico entre o neurônio i e o neurônio que estamos analisando chamado de bias: $$y = \sum{i=1}{m}w_ix_i + bias$$
 		<p>Após isso, usa uma função de ativação que será responsável por dar a saída, se o valor de y for maior que um valor, ela manda um sinal para o próximo nível. A função de ativação exerce um papel crucial, pois além de controlar a saída, ele evita que a saída exceda certo valor e assim dispare todos os neurônios da rede.
 		<p>Entre os tipos de função de  ativação temos a limiar, que restringe a saída a valores binários (0 ou 1), linear por partes, que permite o valor variar em certo intervalo, sigmoidal, que também assume um valor entre 0 e 1, mas possui um balanceamento adequado entre um comportamento linear e não linear, e tangente hiperbólica, similar a sigmoidal, porém assume valores negativos. O uso de cada uma é determinado caso a caso.
